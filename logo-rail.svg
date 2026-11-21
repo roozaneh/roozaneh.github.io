@@ -1,0 +1,18 @@
+<svg viewBox="0 0 609 593" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CustomizeFund">
+<title>CustomizeFund</title>
+<defs>
+<linearGradient id="az" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6FB4FA"/><stop offset=".12" stop-color="#1E6FE0"/><stop offset=".5" stop-color="#0B3F9E"/><stop offset="1" stop-color="#04245F"/></linearGradient>
+<linearGradient id="af" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#161A20"/><stop offset=".24" stop-color="#101318"/><stop offset=".62" stop-color="#0A0C10"/><stop offset="1" stop-color="#05070A"/></linearGradient>
+<linearGradient id="aa" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#0257C9"/><stop offset=".55" stop-color="#0482F1"/><stop offset="1" stop-color="#4FA9FA"/></linearGradient>
+</defs>
+<rect width="609" height="593" rx="138" fill="url(#az)"/>
+<rect x="15" y="15" width="579" height="563" rx="123" fill="url(#af)"/>
+<g transform="translate(90.27 222.89) scale(0.53)"><g transform="translate(0 29)">
+<path fill="#F2F5FA" d="M283 0 L125 0 A125 125 0 0 0 125 250 L250 250 L192 192 L125 192 A67 67 0 0 1 125 58 L225 58Z"/>
+<path fill="#F2F5FA" d="M339 0 L538 0 L480 58 L281 58Z"/>
+<path fill="#F2F5FA" d="M339 94 L488 94 L430 152 L339 152 L339 250 L281 250 L281 152Z"/>
+<path fill="#F2F5FA" d="M560 0 L633.5 73.5 L592 115 L518.5 41.5Z"/>
+<path fill="url(#aa)" d="M696.5 136.5 L810 250 L727 250 L655 178Z"/>
+<path fill="url(#aa)" d="M480 250 L703.85 26.15 L688.69 19.08 L799 -29 L750.92 81.31 L743.85 66.15 L560 250Z"/>
+</g></g>
+</svg>

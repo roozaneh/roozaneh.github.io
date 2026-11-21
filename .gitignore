@@ -1,0 +1,13 @@
+HANDOFF.md
+FINANCIAL_REPORT.md
+*.bak
+*.v*
+*.secret.*
+hero_to_plans_highres.png
+test_snap.png
+*.screenshot.png
+clone_site.py
+download_all.py
+server.py
+__pycache__/
+.DS_Store

@@ -1,0 +1,196 @@
+/* ── چت زنده CFX ── */
+#lcw, #lcw * { box-sizing: border-box; }
+#lcw {
+  --lc-brand: #1188E2;
+  --lc-brand-d: #0A63D0;
+  --lc-brand-l: #2EA8F5;
+  --lc-bg: #ffffff;
+  --lc-ink: #0B1220;
+  --lc-sub: #64748B;
+  --lc-line: rgba(10,99,208,0.14);
+  --lc-me: linear-gradient(135deg, #1188E2, #0A63D0);
+  position: fixed; bottom: 24px; z-index: 9998;
+  font-family: 'IRANSansX','Vazirmatn',system-ui,sans-serif;
+}
+html[dir="rtl"] #lcw { right: 24px; left: auto; }
+html[dir="ltr"] #lcw { left: 24px; right: auto; }
+html[data-theme="dark"] #lcw {
+  --lc-bg: #12171F; --lc-ink: #F1F5F9; --lc-sub: #94A3B8;
+  --lc-line: rgba(46,168,245,0.22);
+}
+
+/* حباب */
+#lcw-btn {
+  width: 60px; height: 60px; border-radius: 50%; border: 0; cursor: pointer;
+  background: linear-gradient(135deg, var(--lc-brand-l), var(--lc-brand-d));
+  box-shadow: 0 10px 30px rgba(10,99,208,0.38);
+  display: grid; place-items: center; transition: transform .18s ease, box-shadow .18s ease;
+}
+#lcw-btn:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 14px 38px rgba(10,99,208,0.5); }
+#lcw-btn svg { width: 27px; height: 27px; fill: #fff; }
+#lcw-btn .lc-x { display: none; }
+#lcw.on #lcw-btn .lc-c { display: none; }
+#lcw.on #lcw-btn .lc-x { display: block; }
+#lcw-dot {
+  position: absolute; top: 2px; width: 13px; height: 13px; border-radius: 50%;
+  background: #EF4444; border: 2px solid #fff; display: none;
+}
+html[dir="rtl"] #lcw-dot { left: 2px; }
+html[dir="ltr"] #lcw-dot { right: 2px; }
+#lcw.unread #lcw-dot { display: block; }
+
+/* پنجره */
+#lcw-box {
+  position: absolute; bottom: 74px; width: 368px; max-width: calc(100vw - 32px);
+  height: 520px; max-height: calc(100vh - 130px);
+  background: var(--lc-bg); border: 1px solid var(--lc-line); border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(2,12,27,0.26); overflow: hidden;
+  display: none; flex-direction: column;
+  animation: lc-in .22s cubic-bezier(.2,.9,.3,1);
+}
+html[dir="rtl"] #lcw-box { right: 0; }
+html[dir="ltr"] #lcw-box { left: 0; }
+#lcw.on #lcw-box { display: flex; }
+@keyframes lc-in { from { opacity: 0; transform: translateY(14px) scale(.97); } }
+
+/* هدر */
+#lcw-hd {
+  padding: 13px 15px; display: flex; align-items: center; gap: 10px;
+  background: linear-gradient(135deg, var(--lc-brand-d), var(--lc-brand));
+  color: #fff; flex: 0 0 auto;
+}
+#lcw-av {
+  width: 38px; height: 38px; border-radius: 50%; flex: 0 0 auto;
+  background: rgba(255,255,255,0.2); display: grid; place-items: center;
+  font-weight: 800; font-size: .95rem;
+}
+#lcw-hd b { font-size: .92rem; font-weight: 800; display: block; }
+#lcw-hd span { font-size: .72rem; opacity: .85; display: flex; align-items: center; gap: 5px; }
+#lcw-hd i {
+  width: 7px; height: 7px; border-radius: 50%; background: #4ADE80;
+  box-shadow: 0 0 0 0 rgba(74,222,128,.7); animation: lc-pulse 2s infinite;
+}
+@keyframes lc-pulse { 70% { box-shadow: 0 0 0 7px rgba(74,222,128,0); } 100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); } }
+
+/* بدنه */
+#lcw-bd { flex: 1 1 auto; overflow-y: auto; padding: 15px; display: flex; flex-direction: column; gap: 9px; }
+#lcw-bd::-webkit-scrollbar { width: 5px; }
+#lcw-bd::-webkit-scrollbar-thumb { background: var(--lc-line); border-radius: 3px; }
+.lc-m { max-width: 82%; padding: 9px 13px; border-radius: 15px; font-size: .86rem; line-height: 1.75; white-space: pre-wrap; word-break: break-word; }
+.lc-m.them { background: rgba(10,99,208,0.06); color: var(--lc-ink); border: 1px solid var(--lc-line); }
+html[dir="rtl"] .lc-m.them { align-self: flex-start; border-bottom-right-radius: 5px; }
+html[dir="ltr"] .lc-m.them { align-self: flex-start; border-bottom-left-radius: 5px; }
+html[data-theme="dark"] .lc-m.them { background: rgba(46,168,245,0.10); }
+.lc-m.me { background: var(--lc-me); color: #fff; align-self: flex-end; }
+html[dir="rtl"] .lc-m.me { border-bottom-left-radius: 5px; }
+html[dir="ltr"] .lc-m.me { border-bottom-right-radius: 5px; }
+.lc-typ { align-self: flex-start; display: flex; gap: 4px; padding: 11px 14px; background: rgba(10,99,208,0.06); border-radius: 15px; }
+.lc-typ s { width: 6px; height: 6px; border-radius: 50%; background: var(--lc-sub); animation: lc-bounce 1.3s infinite; }
+.lc-typ s:nth-child(2) { animation-delay: .18s; } .lc-typ s:nth-child(3) { animation-delay: .36s; }
+@keyframes lc-bounce { 0%,60%,100% { transform: translateY(0); opacity: .45; } 30% { transform: translateY(-5px); opacity: 1; } }
+
+/* فرم */
+#lcw-form { padding: 20px 17px; overflow-y: auto; flex: 1 1 auto; }
+#lcw-form h4 { margin: 0 0 6px; font-size: .95rem; color: var(--lc-ink); font-weight: 800; }
+#lcw-form p { margin: 0 0 15px; font-size: .78rem; color: var(--lc-sub); line-height: 1.8; }
+.lc-in {
+  width: 100%; padding: 10px 12px; margin-bottom: 9px; font: inherit; font-size: .85rem;
+  border: 1px solid var(--lc-line); border-radius: 10px; background: transparent; color: var(--lc-ink);
+  transition: border-color .15s;
+}
+.lc-in:focus { outline: none; border-color: var(--lc-brand); }
+.lc-in::placeholder { color: var(--lc-sub); opacity: .75; }
+#lcw-err { font-size: .76rem; color: #EF4444; margin-bottom: 8px; min-height: 16px; }
+.lc-go {
+  width: 100%; padding: 11px; border: 0; border-radius: 10px; cursor: pointer;
+  background: linear-gradient(135deg, var(--lc-brand-l), var(--lc-brand-d));
+  color: #fff; font: inherit; font-size: .87rem; font-weight: 800;
+}
+.lc-go:disabled { opacity: .6; cursor: default; }
+
+/* نوار ارسال */
+#lcw-ft { flex: 0 0 auto; border-top: 1px solid var(--lc-line); padding: 9px 11px; display: flex; gap: 8px; align-items: flex-end; }
+#lcw-ta {
+  flex: 1; border: 0; background: transparent; resize: none; font: inherit; font-size: .86rem;
+  color: var(--lc-ink); max-height: 90px; line-height: 1.7; padding: 6px 2px;
+}
+#lcw-ta:focus { outline: none; }
+#lcw-send {
+  width: 36px; height: 36px; flex: 0 0 auto; border: 0; border-radius: 50%; cursor: pointer;
+  background: var(--lc-brand); display: grid; place-items: center;
+}
+#lcw-send:disabled { opacity: .4; cursor: default; }
+#lcw-send svg { width: 17px; height: 17px; fill: #fff; }
+html[dir="rtl"] #lcw-send svg { transform: scaleX(-1); }
+#lcw-note { font-size: .66rem; color: var(--lc-sub); text-align: center; padding: 0 0 7px; opacity: .8; }
+
+#lcw-close { display: none; }
+
+@media (max-width: 560px) {
+  #lcw { bottom: 16px; }
+  html[dir="rtl"] #lcw { right: 16px; }
+  html[dir="ltr"] #lcw { left: 16px; }
+
+  /* پنجره تمام‌صفحه: کارت شناور در گوشی جا نمی‌شود */
+  #lcw.on #lcw-box {
+    position: fixed;
+    inset: 0;
+    width: 100%; max-width: 100%;
+    height: 100dvh; max-height: 100dvh;
+    border-radius: 0; border: 0;
+    animation: lc-up .2s ease;
+  }
+  @supports not (height: 100dvh) {
+    #lcw.on #lcw-box { height: 100vh; max-height: 100vh; }
+  }
+  @keyframes lc-up { from { opacity: 0; transform: translateY(20px); } }
+
+  /* دکمه بستن داخل هدر، نه حباب بیرونی */
+  #lcw.on #lcw-btn { display: none; }
+  #lcw.on #lcw-close {
+    display: grid; place-items: center;
+    width: 34px; height: 34px; flex: 0 0 auto;
+    border: 0; border-radius: 50%; cursor: pointer;
+    background: rgba(255,255,255,0.18);
+  }
+  #lcw-close svg { width: 17px; height: 17px; fill: #fff; }
+
+  #lcw-hd { padding: 11px 13px; padding-top: max(11px, env(safe-area-inset-top)); }
+  #lcw-av { width: 34px; height: 34px; }
+  #lcw-bd { padding: 13px; }
+  .lc-m { max-width: 86%; font-size: .88rem; }
+  #lcw-form { padding: 22px 18px; }
+  #lcw-ft { padding-bottom: max(9px, env(safe-area-inset-bottom)); }
+  #lcw-note { padding-bottom: 4px; }
+  body.lc-lock { overflow: hidden; }
+}
+
+/* ===== CFX-LC-RIGHT START ===== */
+/* حباب و پنجره‌ی چت در انگلیسی هم پایین سمت راست، مثل فارسی */
+html[dir="ltr"] #lcw{left:auto;right:24px}
+html[dir="ltr"] #lcw-dot{right:auto;left:2px}
+html[dir="ltr"] #lcw-box{left:auto;right:0}
+@media (max-width:560px){ html[dir="ltr"] #lcw{left:auto;right:16px} }
+/* ===== CFX-LC-RIGHT END ===== */
+
+/* ===== CFX-LC-SQUARE START ===== */
+#lcw-btn,#lcw-av,#lcw-hd i,#lcw-send,#lcw.on #lcw-close{border-radius:16px!important}
+/* ===== CFX-LC-SQUARE END ===== */
+
+/* CFX-LCW-CLOSE: big, always-visible close button while the chat is open */
+#lcw-hd{position:relative}
+#lcw.on #lcw-close{display:flex!important;align-items:center;justify-content:center;position:absolute;top:50%;transform:translateY(-50%);inset-inline-end:12px;
+  width:42px!important;height:42px!important;padding:0;border-radius:12px!important;cursor:pointer;z-index:3;
+  background:rgba(255,255,255,.2)!important;border:1px solid rgba(255,255,255,.4)!important;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+#lcw.on #lcw-close:hover,#lcw.on #lcw-close:active{background:rgba(255,255,255,.32)!important}
+#lcw.on #lcw-close svg{width:24px!important;height:24px!important;fill:#fff}
+#lcw.on #lcw-hd{padding-inline-end:64px}
+/* CFX-LCW-X: draw the X with CSS so it always shows */
+#lcw.on #lcw-close svg{display:none!important}
+#lcw.on #lcw-close::before,#lcw.on #lcw-close::after{content:"";position:absolute;left:50%;top:50%;width:20px;height:2.6px;border-radius:2px;background:#fff;opacity:1}
+#lcw.on #lcw-close::before{transform:translate(-50%,-50%) rotate(45deg)}
+#lcw.on #lcw-close::after{transform:translate(-50%,-50%) rotate(-45deg)}
+/* CFX-LCW-HDR: close button lives inside the blue header, top-left */
+#lcw-hd{position:relative}
+#lcw.on #lcw-hd #lcw-close{position:absolute!important;top:50%!important;left:12px!important;right:auto!important;transform:translateY(-50%)!important;margin:0!important}
+#lcw.on #lcw-hd{padding-left:66px!important}
