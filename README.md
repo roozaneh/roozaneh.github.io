@@ -4,3 +4,6 @@
 🌐 **آدرس وب‌سایت:** [https://roozaneh.github.io](https://roozaneh.github.io)
 🤖 **ربات تلگرام:** [@RoozanehNetBot](https://t.me/RoozanehNetBot)
 📢 **کانال اطلاع‌رسانی:** [@RoozanehNet](https://t.me/RoozanehNet)
+
+
+<script data-goatcounter="https://roozaneh.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
