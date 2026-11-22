@@ -1,7 +1,7 @@
 # Action Plan
 
 - URL: `https://roozaneh.github.io/`
-- Overall score: `72/100`
+- Overall score: `74/100`
 
 ## Priority Fixes
 

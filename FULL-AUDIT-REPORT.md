@@ -1,8 +1,8 @@
 # Full Audit Report
 
 - URL: `https://roozaneh.github.io/`
-- Generated: `2026-11-22T03:52:11.151336`
-- Overall score: `72/100`
+- Generated: `2026-11-22T03:59:54.517590`
+- Overall score: `74/100`
 - Score confidence: `Medium`
 - Scoring version: `1`
 
@@ -16,13 +16,13 @@
 | Broken Links | 10 | 0 |
 | Internal Links | 8 | 80 |
 | Redirects | 3 | 100 |
-| AI Search | 5 | 90 |
+| AI Search | 5 | 100 |
 | Performance and Core Web Vitals | 13 | 0 |
 | On-Page SEO | 10 | 100 |
 | Readability | 8 | 100 |
 | Entity SEO | 5 | 0 |
 | Link Profile | 7 | 75 |
-| Hreflang | 5 | 0 |
+| Hreflang | 5 | 100 |
 | Content Uniqueness | 5 | 100 |
 
 ## Findings
