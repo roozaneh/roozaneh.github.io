@@ -84,7 +84,7 @@ body {
     position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
     text-align: center;
 }
-.score-gauge .gauge-number { font-size: 3rem; font-weight: 800; color: #f97316; }
+.score-gauge .gauge-number { font-size: 3rem; font-weight: 800; color: #eab308; }
 .score-gauge .gauge-grade { font-size: 1rem; color: var(--text-muted); }
 .score-stats { display: flex; gap: 24px; }
 .stat-card {
@@ -201,7 +201,7 @@ tr:hover td { background: rgba(99,102,241,0.03); }
     <div class="container">
         <h1>SEO Analysis Report</h1>
         <div class="domain">roozaneh.github.io</div>
-        <div class="timestamp">Generated: November 22, 2026 at 03:28 AM</div>
+        <div class="timestamp">Generated: November 22, 2026 at 03:52 AM</div>
     </div>
 </div>
 
@@ -212,26 +212,26 @@ tr:hover td { background: rgba(99,102,241,0.03); }
         <div class="score-gauge">
             <svg viewBox="0 0 200 200">
                 <circle cx="100" cy="100" r="85" fill="none" stroke="var(--card-border)" stroke-width="12"/>
-                <circle cx="100" cy="100" r="85" fill="none" stroke="#f97316" stroke-width="12"
-                    stroke-dasharray="363.2 534.07" stroke-linecap="round"
+                <circle cx="100" cy="100" r="85" fill="none" stroke="#eab308" stroke-width="12"
+                    stroke-dasharray="384.6 534.07" stroke-linecap="round"
                     transform="rotate(-90 100 100)"/>
             </svg>
             <div class="gauge-value">
-                <div class="gauge-number">68</div>
-                <div class="gauge-grade">Grade: C</div>
+                <div class="gauge-number">72</div>
+                <div class="gauge-grade">Grade: B</div>
             </div>
         </div>
         <div class="score-stats">
             <div class="stat-card stat-critical">
-                <div class="stat-value">3</div>
+                <div class="stat-value">2</div>
                 <div class="stat-label">Critical</div>
             </div>
             <div class="stat-card stat-warning">
-                <div class="stat-value">5</div>
+                <div class="stat-value">3</div>
                 <div class="stat-label">Warnings</div>
             </div>
             <div class="stat-card stat-pass">
-                <div class="stat-value">6</div>
+                <div class="stat-value">7</div>
                 <div class="stat-label">Info</div>
             </div>
         </div>
@@ -255,10 +255,10 @@ tr:hover td { background: rgba(99,102,241,0.03); }
             <svg class="ring" viewBox="0 0 90 90">
                 <circle cx="45" cy="45" r="40" fill="none" stroke="var(--card-border)" stroke-width="6"/>
                 <circle cx="45" cy="45" r="40" fill="none" stroke="#22c55e" stroke-width="6"
-                    stroke-dasharray="213.6 251.327" stroke-linecap="round"
+                    stroke-dasharray="251.3 251.327" stroke-linecap="round"
                     transform="rotate(-90 45 45)" class="ring-progress"/>
             </svg>
-            <div class="ring-label">85</div>
+            <div class="ring-label">100</div>
             <div class="category-icon">📱</div>
             <div class="category-name">Social Meta</div>
         </div>
@@ -266,10 +266,10 @@ tr:hover td { background: rgba(99,102,241,0.03); }
             <svg class="ring" viewBox="0 0 90 90">
                 <circle cx="45" cy="45" r="40" fill="none" stroke="var(--card-border)" stroke-width="6"/>
                 <circle cx="45" cy="45" r="40" fill="none" stroke="#22c55e" stroke-width="6"
-                    stroke-dasharray="226.2 251.327" stroke-linecap="round"
+                    stroke-dasharray="251.3 251.327" stroke-linecap="round"
                     transform="rotate(-90 45 45)" class="ring-progress"/>
             </svg>
-            <div class="ring-label">90</div>
+            <div class="ring-label">100</div>
             <div class="category-icon">🤖</div>
             <div class="category-name">Robots & Crawlers</div>
         </div>
@@ -287,11 +287,11 @@ tr:hover td { background: rgba(99,102,241,0.03); }
         <div class="category-card" onclick="scrollToSection('internal_links')">
             <svg class="ring" viewBox="0 0 90 90">
                 <circle cx="45" cy="45" r="40" fill="none" stroke="var(--card-border)" stroke-width="6"/>
-                <circle cx="45" cy="45" r="40" fill="none" stroke="#eab308" stroke-width="6"
-                    stroke-dasharray="150.8 251.327" stroke-linecap="round"
+                <circle cx="45" cy="45" r="40" fill="none" stroke="#22c55e" stroke-width="6"
+                    stroke-dasharray="201.1 251.327" stroke-linecap="round"
                     transform="rotate(-90 45 45)" class="ring-progress"/>
             </svg>
-            <div class="ring-label">60</div>
+            <div class="ring-label">80</div>
             <div class="category-icon">🕸️</div>
             <div class="category-name">Internal Links</div>
         </div>
@@ -440,24 +440,22 @@ tr:hover td { background: rgba(99,102,241,0.03); }
     <!-- Issues Summary -->
     <div class="section" id="section-issues">
         <div class="section-header" onclick="toggleSection('issues')">
-            <h2>🚨 All Issues (14)</h2>
+            <h2>🚨 All Issues (12)</h2>
             <span class="chevron" id="chevron-issues">▼</span>
         </div>
         <div class="section-body" id="body-issues">
             <div class="issue-item critical"><span class="issue-badge">CRITICAL</span> 🔴 5 security headers missing — poor security posture</div>
 <div class="issue-item critical"><span class="issue-badge">CRITICAL</span> 🔴 6 broken link(s) found</div>
-<div class="issue-item critical"><span class="issue-badge">CRITICAL</span> No Organization/Person entity found in JSON-LD. — Fix: Add Organization or Person schema with name, url, logo, and sameAs properties.</div>
-<div class="issue-item warning"><span class="issue-badge">WARNING</span> ⚠️ 6 AI crawlers not explicitly managed: Applebot-Extended, Bytespider, CCBot, anthropic-ai, FacebookBot</div>
 <div class="issue-item warning"><span class="issue-badge">WARNING</span> ⚠️ HSTS missing includeSubDomains directive</div>
 <div class="issue-item warning"><span class="issue-badge">WARNING</span> ⚠️ 1 page(s) have fewer than 3 internal links</div>
-<div class="issue-item warning"><span class="issue-badge">WARNING</span> ⚠️ 1 link(s) have no anchor text</div>
 <div class="issue-item warning"><span class="issue-badge">WARNING</span> ⚠️ Thin content (79 words) — may rank poorly</div>
-<div class="issue-item info"><span class="issue-badge">INFO</span> No Wikidata entry found for 'روزنه (Roozaneh)'. — Fix: If the entity meets Wikidata notability guidelines, create or improve an item with accurate third-party references. Do not create one solely for SEO.</div>
-<div class="issue-item info"><span class="issue-badge">INFO</span> No Wikipedia article found for 'روزنه (Roozaneh)'. — Fix: Only pursue Wikipedia if the entity meets independent notability standards. Otherwise, strengthen official schema, sameAs profiles, citations, and About/Contact signals.</div>
+<div class="issue-item info"><span class="issue-badge">INFO</span> No Wikidata entry found for 'روزنه (Roozaneh Network)'. — Fix: If the entity meets Wikidata notability guidelines, create or improve an item with accurate third-party references. Do not create one solely for SEO.</div>
+<div class="issue-item info"><span class="issue-badge">INFO</span> No Wikipedia article found for 'روزنه (Roozaneh Network)'. — Fix: Only pursue Wikipedia if the entity meets independent notability standards. Otherwise, strengthen official schema, sameAs profiles, citations, and About/Contact signals.</div>
 <div class="issue-item info"><span class="issue-badge">INFO</span> Missing sameAs link to Wikipedia (Primary KG signal). — Fix: Add the existing official 'wikipedia.org' URL to sameAs; do not create this profile solely for SEO.</div>
 <div class="issue-item info"><span class="issue-badge">INFO</span> Missing sameAs link to Wikidata (Primary KG signal). — Fix: Add the existing official 'wikidata.org' URL to sameAs; do not create this profile solely for SEO.</div>
 <div class="issue-item info"><span class="issue-badge">INFO</span> Missing sameAs link to LinkedIn (Strong KG signal). — Fix: Add 'linkedin.com' profile URL to sameAs array in your entity schema.</div>
-<div class="issue-item info"><span class="issue-badge">INFO</span> Missing sameAs link to Twitter/X (Strong KG signal). — Fix: Add 'x.com' profile URL to sameAs array in your entity schema.</div>
+<div class="issue-item info"><span class="issue-badge">INFO</span> Could not verify sameAs URL: https://t.me/RoozanehHelp — Fix: Manually confirm this URL is accessible and correct.</div>
+<div class="issue-item info"><span class="issue-badge">INFO</span> Could not verify sameAs URL: https://x.com/RoozanehNet — Fix: Manually confirm this URL is accessible and correct.</div>
 
         </div>
     </div>
@@ -484,13 +482,13 @@ tr:hover td { background: rgba(99,102,241,0.03); }
     <!-- Social Meta -->
     <div class="section" id="section-social">
         <div class="section-header" onclick="toggleSection('social')">
-            <h2>📱 Social Meta Tags <span class="badge pass">85/100</span></h2>
+            <h2>📱 Social Meta Tags <span class="badge pass">100/100</span></h2>
             <span class="chevron" id="chevron-social">▼</span>
         </div>
         <div class="section-body" id="body-social">
             <table>
                 <thead><tr><th>Tag</th><th>Status</th><th>Value</th></tr></thead>
-                <tbody><tr><td>og:title</td><td><span class="badge pass">✅</span></td><td>روزنه (Roozaneh) | اینترنت آزاد، ضد تحریم و پرسرعت</td></tr><tr><td>og:description</td><td><span class="badge pass">✅</span></td><td>سرور و کانفیگ‌های اختصاصی ضد تحریم و دور زدن نت ملی با سرعت </td></tr><tr><td>og:image</td><td><span class="badge pass">✅</span></td><td>https://roozaneh.github.io/og.png?v=6</td></tr><tr><td>og:url</td><td><span class="badge pass">✅</span></td><td>https://roozaneh.github.io/</td></tr><tr><td>og:type</td><td><span class="badge pass">✅</span></td><td>website</td></tr><tr><td>og:site_name</td><td><span class="badge pass">✅</span></td><td>روزنه (Roozaneh)</td></tr><tr><td>twitter:card</td><td><span class="badge pass">✅</span></td><td>summary_large_image</td></tr><tr><td>twitter:title</td><td><span class="badge pass">✅</span></td><td>روزنه (Roozaneh) | اینترنت آزاد، ضد تحریم و پرسرعت</td></tr><tr><td>twitter:description</td><td><span class="badge pass">✅</span></td><td>سرور و کانفیگ‌های اختصاصی ضد تحریم و دور زدن نت ملی با سرعت </td></tr><tr><td>twitter:image</td><td><span class="badge pass">✅</span></td><td>https://roozaneh.github.io/og.png?v=6</td></tr><tr><td>twitter:site</td><td><span class="badge warning">Missing</span></td><td>—</td></tr></tbody>
+                <tbody><tr><td>og:title</td><td><span class="badge pass">✅</span></td><td>روزنه (Roozaneh) | اینترنت آزاد، ضد تحریم و پرسرعت</td></tr><tr><td>og:description</td><td><span class="badge pass">✅</span></td><td>سرور و کانفیگ‌های اختصاصی ضد تحریم و دور زدن نت ملی با سرعت </td></tr><tr><td>og:image</td><td><span class="badge pass">✅</span></td><td>https://roozaneh.github.io/og.png?v=6</td></tr><tr><td>og:url</td><td><span class="badge pass">✅</span></td><td>https://roozaneh.github.io/</td></tr><tr><td>og:type</td><td><span class="badge pass">✅</span></td><td>website</td></tr><tr><td>og:site_name</td><td><span class="badge pass">✅</span></td><td>روزنه (Roozaneh)</td></tr><tr><td>twitter:card</td><td><span class="badge pass">✅</span></td><td>summary_large_image</td></tr><tr><td>twitter:title</td><td><span class="badge pass">✅</span></td><td>روزنه (Roozaneh) | اینترنت آزاد، ضد تحریم و پرسرعت</td></tr><tr><td>twitter:description</td><td><span class="badge pass">✅</span></td><td>سرور و کانفیگ‌های اختصاصی ضد تحریم و دور زدن نت ملی با سرعت </td></tr><tr><td>twitter:image</td><td><span class="badge pass">✅</span></td><td>https://roozaneh.github.io/og.png?v=6</td></tr><tr><td>twitter:site</td><td><span class="badge pass">✅</span></td><td>@RoozanehNet</td></tr></tbody>
             </table>
         </div>
     </div>
@@ -498,19 +496,19 @@ tr:hover td { background: rgba(99,102,241,0.03); }
     <!-- AI Crawlers -->
     <div class="section" id="section-robots">
         <div class="section-header" onclick="toggleSection('robots')">
-            <h2>🤖 Robots & AI Crawlers <span class="badge pass">90/100</span></h2>
+            <h2>🤖 Robots & AI Crawlers <span class="badge pass">100/100</span></h2>
             <span class="chevron" id="chevron-robots">▼</span>
         </div>
         <div class="section-body" id="body-robots">
             <div class="summary-row">
                 <div class="summary-item"><div class="val">200</div><div class="lbl">robots.txt</div></div>
                 <div class="summary-item"><div class="val">1</div><div class="lbl">Sitemaps</div></div>
-                <div class="summary-item"><div class="val">9</div><div class="lbl">User-Agents</div></div>
+                <div class="summary-item"><div class="val">15</div><div class="lbl">User-Agents</div></div>
             </div>
             <h3 style="margin: 16px 0 8px; font-size: 0.95rem;">AI Crawler Management</h3>
             <table>
                 <thead><tr><th>Crawler</th><th>Status</th><th>Details</th></tr></thead>
-                <tbody><tr><td>GPTBot</td><td><span class="badge info">Info</span></td><td>explicitly allowed</td></tr><tr><td>ChatGPT-User</td><td><span class="badge info">Info</span></td><td>explicitly allowed</td></tr><tr><td>ClaudeBot</td><td><span class="badge info">Info</span></td><td>explicitly allowed</td></tr><tr><td>PerplexityBot</td><td><span class="badge info">Info</span></td><td>explicitly allowed</td></tr><tr><td>Google-Extended</td><td><span class="badge info">Info</span></td><td>explicitly allowed</td></tr><tr><td>Applebot-Extended</td><td><span class="badge warning">Unmanaged</span></td><td>not managed (inherits * rules)</td></tr><tr><td>Bytespider</td><td><span class="badge warning">Unmanaged</span></td><td>not managed (inherits * rules)</td></tr><tr><td>CCBot</td><td><span class="badge warning">Unmanaged</span></td><td>not managed (inherits * rules)</td></tr><tr><td>anthropic-ai</td><td><span class="badge warning">Unmanaged</span></td><td>not managed (inherits * rules)</td></tr><tr><td>FacebookBot</td><td><span class="badge warning">Unmanaged</span></td><td>not managed (inherits * rules)</td></tr><tr><td>Amazonbot</td><td><span class="badge warning">Unmanaged</span></td><td>not managed (inherits * rules)</td></tr></tbody>
+                <tbody><tr><td>GPTBot</td><td><span class="badge info">Info</span></td><td>explicitly allowed</td></tr><tr><td>ChatGPT-User</td><td><span class="badge info">Info</span></td><td>explicitly allowed</td></tr><tr><td>ClaudeBot</td><td><span class="badge info">Info</span></td><td>explicitly allowed</td></tr><tr><td>PerplexityBot</td><td><span class="badge info">Info</span></td><td>explicitly allowed</td></tr><tr><td>Google-Extended</td><td><span class="badge info">Info</span></td><td>explicitly allowed</td></tr><tr><td>Applebot-Extended</td><td><span class="badge info">Info</span></td><td>explicitly allowed</td></tr><tr><td>Bytespider</td><td><span class="badge info">Info</span></td><td>explicitly allowed</td></tr><tr><td>CCBot</td><td><span class="badge info">Info</span></td><td>explicitly allowed</td></tr><tr><td>anthropic-ai</td><td><span class="badge info">Info</span></td><td>explicitly allowed</td></tr><tr><td>FacebookBot</td><td><span class="badge info">Info</span></td><td>explicitly allowed</td></tr><tr><td>Amazonbot</td><td><span class="badge info">Info</span></td><td>explicitly allowed</td></tr></tbody>
             </table>
         </div>
     </div>
@@ -518,34 +516,34 @@ tr:hover td { background: rgba(99,102,241,0.03); }
     <!-- Broken Links -->
     <div class="section" id="section-broken_links">
         <div class="section-header" onclick="toggleSection('broken_links')">
-            <h2>🔗 Broken Links <span class="badge critical">6 broken / 14 total</span></h2>
+            <h2>🔗 Broken Links <span class="badge critical">6 broken / 13 total</span></h2>
             <span class="chevron" id="chevron-broken_links">▼</span>
         </div>
         <div class="section-body" id="body-broken_links">
             <div class="summary-row">
-                <div class="summary-item"><div class="val" style="color:var(--green)">1</div><div class="lbl">Healthy</div></div>
+                <div class="summary-item"><div class="val" style="color:var(--green)">7</div><div class="lbl">Healthy</div></div>
                 <div class="summary-item"><div class="val" style="color:var(--red)">6</div><div class="lbl">Broken</div></div>
-                <div class="summary-item"><div class="val" style="color:var(--yellow)">7</div><div class="lbl">Redirected</div></div>
+                <div class="summary-item"><div class="val" style="color:var(--yellow)">0</div><div class="lbl">Redirected</div></div>
                 <div class="summary-item"><div class="val" style="color:var(--orange)">0</div><div class="lbl">Timeout</div></div>
             </div>
-            <table><thead><tr><th>Type</th><th>Status</th><th>URL</th><th>Anchor</th></tr></thead><tbody><tr><td><span class="badge warning">External</span></td><td class="mono">Blocked: URL resolves to private/internal IP (10.10.34.35)</td><td class="link-url">https://t.me/RoozanehNetBot?start=test2gb</td><td>دریافت تست رایگان در تلگرام</td></tr><tr><td><span class="badge warning">External</span></td><td class="mono">404</td><td class="link-url">https://apps.apple.com/app/v2box-v2ray-client/id6446814042</td><td>V2Box / Streisandآیفون (App Store)</td></tr><tr><td><span class="badge warning">External</span></td><td class="mono">Blocked: URL resolves to private/internal IP (10.10.34.35)</td><td class="link-url">https://t.me/RoozanehNetBot?start=apps</td><td>دانلود از تلگرامفایل مستقیم در ربات</td></tr><tr><td><span class="badge warning">External</span></td><td class="mono">Blocked: URL resolves to private/internal IP (10.10.34.35)</td><td class="link-url">https://t.me/RoozanehHelp</td><td>Telegram: @RoozanehHelp</td></tr><tr><td><span class="badge warning">External</span></td><td class="mono">Blocked: URL resolves to private/internal IP (10.10.34.35)</td><td class="link-url">https://t.me/RoozanehNetBot</td><td>[no text]</td></tr><tr><td><span class="badge warning">External</span></td><td class="mono">404</td><td class="link-url">https://play.google.com/store/apps/details?id=com.v2ray.ang</td><td>v2rayNG / Hiddifyاندروید (Google Play)</td></tr></tbody></table>
+            <table><thead><tr><th>Type</th><th>Status</th><th>URL</th><th>Anchor</th></tr></thead><tbody><tr><td><span class="badge warning">External</span></td><td class="mono">Blocked: URL resolves to private/internal IP (10.10.34.35)</td><td class="link-url">https://t.me/RoozanehHelp</td><td>پشتیبانی ۲۴/۷</td></tr><tr><td><span class="badge warning">External</span></td><td class="mono">Blocked: URL resolves to private/internal IP (10.10.34.35)</td><td class="link-url">https://t.me/RoozanehNetBot?start=test2gb</td><td>دریافت تست رایگان در تلگرام</td></tr><tr><td><span class="badge warning">External</span></td><td class="mono">Blocked: URL resolves to private/internal IP (10.10.34.35)</td><td class="link-url">https://t.me/RoozanehNetBot?start=order</td><td>دریافت سرویسGet Started</td></tr><tr><td><span class="badge warning">External</span></td><td class="mono">Blocked: URL resolves to private/internal IP (10.10.34.35)</td><td class="link-url">https://t.me/RoozanehNetBot?start=apps</td><td>دانلود از تلگرامفایل مستقیم در ربات</td></tr><tr><td><span class="badge warning">External</span></td><td class="mono">Blocked: URL resolves to private/internal IP (10.10.34.35)</td><td class="link-url">https://t.me/RoozanehNetBot</td><td>ربات تلگرام روزنه</td></tr><tr><td><span class="badge warning">External</span></td><td class="mono">Blocked: URL resolves to private/internal IP (10.10.34.35)</td><td class="link-url">https://x.com/RoozanehNet</td><td>توییتر / X روزنه نت</td></tr></tbody></table>
         </div>
     </div>
 
     <!-- Internal Links -->
     <div class="section" id="section-internal_links">
         <div class="section-header" onclick="toggleSection('internal_links')">
-            <h2>🕸️ Internal Link Structure <span class="badge warning">60/100</span></h2>
+            <h2>🕸️ Internal Link Structure <span class="badge pass">80/100</span></h2>
             <span class="chevron" id="chevron-internal_links">▼</span>
         </div>
         <div class="section-body" id="body-internal_links">
             <div class="summary-row">
-                <div class="summary-item"><div class="val">6</div><div class="lbl">Pages Crawled</div></div>
-                <div class="summary-item"><div class="val">41</div><div class="lbl">Internal Links</div></div>
-                <div class="summary-item"><div class="val">6.8</div><div class="lbl">Avg Links/Page</div></div>
+                <div class="summary-item"><div class="val">5</div><div class="lbl">Pages Crawled</div></div>
+                <div class="summary-item"><div class="val">17</div><div class="lbl">Internal Links</div></div>
+                <div class="summary-item"><div class="val">3.4</div><div class="lbl">Avg Links/Page</div></div>
                 <div class="summary-item"><div class="val">0</div><div class="lbl">Orphan Pages</div></div>
             </div>
-            <h3 style="margin:16px 0 8px;font-size:0.95rem;">Top Anchor Texts</h3><div class="bar-row"><span class="bar-label">Rules</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-value">5</span></div><div class="bar-row"><span class="bar-label">FAQ</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-value">5</span></div><div class="bar-row"><span class="bar-label">Contact us</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-value">5</span></div><div class="bar-row"><span class="bar-label">About</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-value">5</span></div><div class="bar-row"><span class="bar-label">CustomizeFund</span><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div><span class="bar-value">4</span></div><div class="bar-row"><span class="bar-label">شروع چالشStart Challenge</span><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div><span class="bar-value">4</span></div><div class="bar-row"><span class="bar-label">Articles</span><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div><span class="bar-value">4</span></div><div class="bar-row"><span class="bar-label">[email protected]</span><div class="bar-track"><div class="bar-fill" style="width:60%"></div></div><span class="bar-value">3</span></div><div class="bar-row"><span class="bar-label">مشاهده پلن‌هاView plans</span><div class="bar-track"><div class="bar-fill" style="width:40%"></div></div><span class="bar-value">2</span></div><div class="bar-row"><span class="bar-label">دریافت سرویسGet Started</span><div class="bar-track"><div class="bar-fill" style="width:20%"></div></div><span class="bar-value">1</span></div>
+            <h3 style="margin:16px 0 8px;font-size:0.95rem;">Top Anchor Texts</h3><div class="bar-row"><span class="bar-label">راهنمای خرید VPN و فیلترش</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-value">2</span></div><div class="bar-row"><span class="bar-label">کانفیگ V2Ray همراه اول و </span><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div><span class="bar-value">1</span></div><div class="bar-row"><span class="bar-label">تانل اینترنت ملی و رفع تح</span><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div><span class="bar-value">1</span></div><div class="bar-row"><span class="bar-label">دانلود کلاینت‌های ویتوری</span><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div><span class="bar-value">1</span></div><div class="bar-row"><span class="bar-label">• پرتال جامع روزنه نت</span><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div><span class="bar-value">1</span></div><div class="bar-row"><span class="bar-label">⚡روزنه نتRoozaneh Network</span><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div><span class="bar-value">1</span></div><div class="bar-row"><span class="bar-label">دانلود کلاینت‌های V2Ray</span><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div><span class="bar-value">1</span></div><div class="bar-row"><span class="bar-label">تانل اینترنت ملی و Clean </span><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div><span class="bar-value">1</span></div><div class="bar-row"><span class="bar-label">🛒خرید VPN پرسرعتراهنمای ج</span><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div><span class="bar-value">1</span></div><div class="bar-row"><span class="bar-label">📶کانفیگ اپراتوریکانفیگ‌ها</span><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div><span class="bar-value">1</span></div>
             
         </div>
     </div>
@@ -557,7 +555,7 @@ tr:hover td { background: rgba(99,102,241,0.03); }
             <span class="chevron" id="chevron-redirects">▼</span>
         </div>
         <div class="section-body" id="body-redirects">
-            <table><thead><tr><th>#</th><th>Status</th><th>URL</th><th>Time</th><th>Type</th></tr></thead><tbody><tr><td>1</td><td><span class="badge pass">200</span></td><td class="link-url">https://roozaneh.github.io/</td><td>531ms</td><td>FINAL</td></tr></tbody></table>
+            <table><thead><tr><th>#</th><th>Status</th><th>URL</th><th>Time</th><th>Type</th></tr></thead><tbody><tr><td>1</td><td><span class="badge pass">200</span></td><td class="link-url">https://roozaneh.github.io/</td><td>720ms</td><td>FINAL</td></tr></tbody></table>
         </div>
     </div>
 
@@ -570,7 +568,7 @@ tr:hover td { background: rgba(99,102,241,0.03); }
         <div class="section-body" id="body-llms_txt">
             <div class="summary-row">
                 <div class="summary-item"><div class="val">✅</div><div class="lbl">llms.txt</div></div>
-                <div class="summary-item"><div class="val">❌</div><div class="lbl">llms-full.txt</div></div>
+                <div class="summary-item"><div class="val">✅</div><div class="lbl">llms-full.txt</div></div>
                 <div class="summary-item"><div class="val">90</div><div class="lbl">Quality Score</div></div>
             </div>
             
@@ -675,10 +673,10 @@ tr:hover td { background: rgba(99,102,241,0.03); }
             <div class="summary-row">
                 <div class="summary-item"><div class="val">❌</div><div class="lbl">Wikidata</div></div>
                 <div class="summary-item"><div class="val">❌</div><div class="lbl">Wikipedia</div></div>
-                <div class="summary-item"><div class="val">0</div><div class="lbl">sameAs Links</div></div>
+                <div class="summary-item"><div class="val">3</div><div class="lbl">sameAs Links</div></div>
                 <div class="summary-item"><div class="val">7</div><div class="lbl">Issues</div></div>
             </div>
-            <div style="margin-top:16px"><h3 style="font-size:0.95rem;margin-bottom:8px;">🔍 Issues Found</h3><div class="issue-item critical"><span class="issue-badge">CRITICAL</span><div><strong>No Organization/Person entity found in JSON-LD.</strong><br><span style=&quot;color:var(--text-muted)&quot;>Fix: Add Organization or Person schema with name, url, logo, and sameAs properties.</span></div></div><div class="issue-item info"><span class="issue-badge">INFO</span><div><strong>No Wikidata entry found for &#x27;روزنه (Roozaneh)&#x27;.</strong><br><span style=&quot;color:var(--text-muted)&quot;>Fix: If the entity meets Wikidata notability guidelines, create or improve an item with accurate third-party references. Do not create one solely for SEO.</span></div></div><div class="issue-item info"><span class="issue-badge">INFO</span><div><strong>No Wikipedia article found for &#x27;روزنه (Roozaneh)&#x27;.</strong><br><span style=&quot;color:var(--text-muted)&quot;>Fix: Only pursue Wikipedia if the entity meets independent notability standards. Otherwise, strengthen official schema, sameAs profiles, citations, and About/Contact signals.</span></div></div><div class="issue-item info"><span class="issue-badge">INFO</span><div><strong>Missing sameAs link to Wikipedia (Primary KG signal).</strong><br><span style=&quot;color:var(--text-muted)&quot;>Fix: Add the existing official &#x27;wikipedia.org&#x27; URL to sameAs; do not create this profile solely for SEO.</span></div></div><div class="issue-item info"><span class="issue-badge">INFO</span><div><strong>Missing sameAs link to Wikidata (Primary KG signal).</strong><br><span style=&quot;color:var(--text-muted)&quot;>Fix: Add the existing official &#x27;wikidata.org&#x27; URL to sameAs; do not create this profile solely for SEO.</span></div></div><div class="issue-item info"><span class="issue-badge">INFO</span><div><strong>Missing sameAs link to LinkedIn (Strong KG signal).</strong><br><span style=&quot;color:var(--text-muted)&quot;>Fix: Add &#x27;linkedin.com&#x27; profile URL to sameAs array in your entity schema.</span></div></div><div class="issue-item info"><span class="issue-badge">INFO</span><div><strong>Missing sameAs link to Twitter/X (Strong KG signal).</strong><br><span style=&quot;color:var(--text-muted)&quot;>Fix: Add &#x27;x.com&#x27; profile URL to sameAs array in your entity schema.</span></div></div></div>
+            <div style="margin-top:16px"><h3 style="font-size:0.95rem;margin-bottom:8px;">🔍 Issues Found</h3><div class="issue-item info"><span class="issue-badge">INFO</span><div><strong>No Wikidata entry found for &#x27;روزنه (Roozaneh Network)&#x27;.</strong><br><span style=&quot;color:var(--text-muted)&quot;>Fix: If the entity meets Wikidata notability guidelines, create or improve an item with accurate third-party references. Do not create one solely for SEO.</span></div></div><div class="issue-item info"><span class="issue-badge">INFO</span><div><strong>No Wikipedia article found for &#x27;روزنه (Roozaneh Network)&#x27;.</strong><br><span style=&quot;color:var(--text-muted)&quot;>Fix: Only pursue Wikipedia if the entity meets independent notability standards. Otherwise, strengthen official schema, sameAs profiles, citations, and About/Contact signals.</span></div></div><div class="issue-item info"><span class="issue-badge">INFO</span><div><strong>Missing sameAs link to Wikipedia (Primary KG signal).</strong><br><span style=&quot;color:var(--text-muted)&quot;>Fix: Add the existing official &#x27;wikipedia.org&#x27; URL to sameAs; do not create this profile solely for SEO.</span></div></div><div class="issue-item info"><span class="issue-badge">INFO</span><div><strong>Missing sameAs link to Wikidata (Primary KG signal).</strong><br><span style=&quot;color:var(--text-muted)&quot;>Fix: Add the existing official &#x27;wikidata.org&#x27; URL to sameAs; do not create this profile solely for SEO.</span></div></div><div class="issue-item info"><span class="issue-badge">INFO</span><div><strong>Missing sameAs link to LinkedIn (Strong KG signal).</strong><br><span style=&quot;color:var(--text-muted)&quot;>Fix: Add &#x27;linkedin.com&#x27; profile URL to sameAs array in your entity schema.</span></div></div><div class="issue-item info"><span class="issue-badge">INFO</span><div><strong>Could not verify sameAs URL: https://t.me/RoozanehHelp</strong><br><span style=&quot;color:var(--text-muted)&quot;>Fix: Manually confirm this URL is accessible and correct.</span></div></div><div class="issue-item info"><span class="issue-badge">INFO</span><div><strong>Could not verify sameAs URL: https://x.com/RoozanehNet</strong><br><span style=&quot;color:var(--text-muted)&quot;>Fix: Manually confirm this URL is accessible and correct.</span></div></div></div>
         </div>
     </div>
 
@@ -691,7 +689,7 @@ tr:hover td { background: rgba(99,102,241,0.03); }
         <div class="section-body" id="body-link_profile">
             <div class="summary-row">
                 <div class="summary-item"><div class="val">5</div><div class="lbl">Pages Crawled</div></div>
-                <div class="summary-item"><div class="val">4.0</div><div class="lbl">Avg Links/Page</div></div>
+                <div class="summary-item"><div class="val">3.6</div><div class="lbl">Avg Links/Page</div></div>
                 <div class="summary-item"><div class="val">0</div><div class="lbl">Orphan Pages</div></div>
                 <div class="summary-item"><div class="val">0</div><div class="lbl">Dead Ends</div></div>
             </div>
@@ -722,7 +720,7 @@ tr:hover td { background: rgba(99,102,241,0.03); }
         </div>
         <div class="section-body" id="body-duplicate_content">
             <div class="summary-row">
-                <div class="summary-item"><div class="val">10</div><div class="lbl">Pages Analyzed</div></div>
+                <div class="summary-item"><div class="val">6</div><div class="lbl">Pages Analyzed</div></div>
                 <div class="summary-item"><div class="val">0</div><div class="lbl">Near Duplicates</div></div>
                 <div class="summary-item"><div class="val">0</div><div class="lbl">Thin Pages</div></div>
             </div>
@@ -737,14 +735,14 @@ tr:hover td { background: rgba(99,102,241,0.03); }
             <span class="chevron" id="chevron-recs">▼</span>
         </div>
         <div class="section-body" id="body-recs">
-            <h3 style="font-size:0.95rem;margin:16px 0 8px;">🛠️ Environment-Specific Fixes</h3><div class="issue-item info"><span class="issue-badge">FIX</span> <strong>5 security headers missing</strong>: Set security headers in `next.config.js` `headers()` or at your edge/CDN.</div><div class="issue-item info"><span class="issue-badge">FIX</span> <strong>6 broken links detected</strong>: Fix links in route components and content source files; validate with link checks in CI.</div><div class="issue-item info"><span class="issue-badge">FIX</span> <strong>Performance measurement incomplete</strong>: Set `PAGESPEED_API_KEY` in your environment or `.env` file (see `.env.example`), then rerun. The CLI also accepts `--api-key`. Prioritize LCP/INP/CLS fixes from that output.</div><h3 style="font-size:0.95rem;margin:16px 0 8px;">🔒 Security</h3><div class="issue-item info"><span class="issue-badge">FIX</span> Content-Security-Policy (CSP): Add a Content-Security-Policy header restricting script/style sources.</div><div class="issue-item info"><span class="issue-badge">FIX</span> X-Frame-Options: Add header: X-Frame-Options: SAMEORIGIN</div><div class="issue-item info"><span class="issue-badge">FIX</span> X-Content-Type-Options: Add header: X-Content-Type-Options: nosniff</div><div class="issue-item info"><span class="issue-badge">FIX</span> Referrer-Policy: Add header: Referrer-Policy: strict-origin-when-cross-origin</div><div class="issue-item info"><span class="issue-badge">FIX</span> Permissions-Policy: Add header: Permissions-Policy: camera=(), microphone=(), geolocation=()</div><h3 style="font-size:0.95rem;margin:16px 0 8px;">📖 Readability</h3><div class="issue-item info"><span class="issue-badge">FIX</span> ⚠️ Thin content (79 words) — may rank poorly</div>
+            <h3 style="font-size:0.95rem;margin:16px 0 8px;">🛠️ Environment-Specific Fixes</h3><div class="issue-item info"><span class="issue-badge">FIX</span> <strong>5 security headers missing</strong>: Set security headers in `next.config.js` `headers()` or at your edge/CDN.</div><div class="issue-item info"><span class="issue-badge">FIX</span> <strong>6 broken links detected</strong>: Fix links in route components and content source files; validate with link checks in CI.</div><div class="issue-item info"><span class="issue-badge">FIX</span> <strong>Performance measurement incomplete</strong>: Set `PAGESPEED_API_KEY` in your environment or `.env` file (see `.env.example`), then rerun. The CLI also accepts `--api-key`. Prioritize LCP/INP/CLS fixes from that output.</div><h3 style="font-size:0.95rem;margin:16px 0 8px;">🔒 Security</h3><div class="issue-item info"><span class="issue-badge">FIX</span> Content-Security-Policy (CSP): Add a Content-Security-Policy header restricting script/style sources.</div><div class="issue-item info"><span class="issue-badge">FIX</span> X-Frame-Options: Add header: X-Frame-Options: SAMEORIGIN</div><div class="issue-item info"><span class="issue-badge">FIX</span> X-Content-Type-Options: Add header: X-Content-Type-Options: nosniff</div><div class="issue-item info"><span class="issue-badge">FIX</span> Referrer-Policy: Add header: Referrer-Policy: strict-origin-when-cross-origin</div><div class="issue-item info"><span class="issue-badge">FIX</span> Permissions-Policy: Add header: Permissions-Policy: camera=(), microphone=(), geolocation=()</div><h3 style="font-size:0.95rem;margin:16px 0 8px;">🕸️ Internal Links</h3><div class="issue-item info"><span class="issue-badge">FIX</span> Increase internal linking — aim for 3-5 relevant links per 1000 words</div><h3 style="font-size:0.95rem;margin:16px 0 8px;">📖 Readability</h3><div class="issue-item info"><span class="issue-badge">FIX</span> ⚠️ Thin content (79 words) — may rank poorly</div>
         </div>
     </div>
 
 </div>
 
 <div class="footer">
-    <p>Generated by SEO Skill · 2026-11-22 03:28</p>
+    <p>Generated by SEO Skill · 2026-11-22 03:52</p>
 </div>
 
 <script>
