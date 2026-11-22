@@ -1,9 +1,9 @@
 # Full Audit Report
 
 - URL: `https://roozaneh.github.io/`
-- Generated: `2026-11-22T03:59:54.517590`
-- Overall score: `74/100`
-- Score confidence: `Medium`
+- Generated: `2026-11-22T04:32:36.192884`
+- Overall score: `75/100`
+- Score confidence: `High`
 - Scoring version: `1`
 
 ## Score Card
@@ -17,7 +17,7 @@
 | Internal Links | 8 | 80 |
 | Redirects | 3 | 100 |
 | AI Search | 5 | 100 |
-| Performance and Core Web Vitals | 13 | 0 |
+| Performance and Core Web Vitals | 13 | 85 |
 | On-Page SEO | 10 | 100 |
 | Readability | 8 | 100 |
 | Entity SEO | 5 | 0 |
@@ -40,12 +40,10 @@
 | Info | Wikipedia | No Wikipedia article found for 'روزنه (Roozaneh Network)'. |  | Only pursue Wikipedia if the entity meets independent notability standards. Otherwise, strengthen official schema, sameAs profiles, citations, and About/Contact signals. |
 | Info | entity | Could not verify sameAs URL: https://t.me/RoozanehHelp |  | Manually confirm this URL is accessible and correct. |
 | Info | entity | Could not verify sameAs URL: https://x.com/RoozanehNet |  | Manually confirm this URL is accessible and correct. |
-| Info | environment | Performance measurement incomplete | PageSpeed API returned an error, so CWV recommendations are less reliable. | Set `PAGESPEED_API_KEY` in your environment or `.env` file (see `.env.example`), then rerun. The CLI also accepts `--api-key`. Prioritize LCP/INP/CLS fixes from that output. |
-| info | pagespeed | pagespeed measurement incomplete | Rate limited by Google API. Wait a few minutes or add an API key. | Rerun this check after resolving the environment/API/network limitation. |
 | Info | sameAs | Missing sameAs link to Wikipedia (Primary KG signal). |  | Add the existing official 'wikipedia.org' URL to sameAs; do not create this profile solely for SEO. |
 | Info | sameAs | Missing sameAs link to Wikidata (Primary KG signal). |  | Add the existing official 'wikidata.org' URL to sameAs; do not create this profile solely for SEO. |
 | Info | sameAs | Missing sameAs link to LinkedIn (Strong KG signal). |  | Add 'linkedin.com' profile URL to sameAs array in your entity schema. |
 
 ## Measurement Notes
 
-1 checks returned errors or incomplete measurements; treat affected scores as directional.
+All configured checks completed without script-level errors.

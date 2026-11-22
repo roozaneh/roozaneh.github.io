@@ -1,7 +1,7 @@
 # Action Plan
 
 - URL: `https://roozaneh.github.io/`
-- Overall score: `74/100`
+- Overall score: `75/100`
 
 ## Priority Fixes
 
@@ -35,22 +35,17 @@
    - Area: `entity`
    - Evidence: See audit output.
    - Fix: Manually confirm this URL is accessible and correct.
-7. **Performance measurement incomplete**
-   - Priority: `Info`
-   - Area: `environment`
-   - Evidence: PageSpeed API returned an error, so CWV recommendations are less reliable.
-   - Fix: Set `PAGESPEED_API_KEY` in your environment or `.env` file (see `.env.example`), then rerun. The CLI also accepts `--api-key`. Prioritize LCP/INP/CLS fixes from that output.
-8. **Missing sameAs link to Wikipedia (Primary KG signal).**
+7. **Missing sameAs link to Wikipedia (Primary KG signal).**
    - Priority: `Info`
    - Area: `sameAs`
    - Evidence: See audit output.
    - Fix: Add the existing official 'wikipedia.org' URL to sameAs; do not create this profile solely for SEO.
-9. **Missing sameAs link to Wikidata (Primary KG signal).**
+8. **Missing sameAs link to Wikidata (Primary KG signal).**
    - Priority: `Info`
    - Area: `sameAs`
    - Evidence: See audit output.
    - Fix: Add the existing official 'wikidata.org' URL to sameAs; do not create this profile solely for SEO.
-10. **Missing sameAs link to LinkedIn (Strong KG signal).**
+9. **Missing sameAs link to LinkedIn (Strong KG signal).**
    - Priority: `Info`
    - Area: `sameAs`
    - Evidence: See audit output.
