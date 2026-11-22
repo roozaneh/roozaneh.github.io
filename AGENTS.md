@@ -10,11 +10,12 @@ Organization: https://github.com/roozaneh
 Roozaneh Network provides high-speed, anti-censorship, stable tunneling services (VLESS Reality, V2Ray) with dedicated European server infrastructure.
 
 ### File Structure:
-- `index.html`: The core landing page. Completely static and hydration-free (Next.js chunk scripts commented out to avoid hydration overwrite issues).
+- `index.html`: The core landing page. Completely static and hydration-free.
 - `landing.js`: Standalone lightweight vanilla JavaScript handling the pricing calculator, interactive plan sliders, theme toggles, and modals.
 - `.nojekyll`: Required for GitHub Pages to preserve `_next/` directories.
 - `llms.txt` & `llms-full.txt`: Standardized AI Search & LLM discovery specifications.
 - `robots.txt` & `sitemap.xml`: Multi-repository SEO and bot directives.
+- `sitemap_index.xml` & `sitemap-index.xml`: Sitemap discovery index aliases.
 - `og.png`, `apple-touch-icon.png`, `favicon.ico`: Brand visual identity assets.
 
 ---
@@ -36,7 +37,8 @@ Roozaneh Network provides high-speed, anti-censorship, stable tunneling services
 
 ---
 
-## 3. Contact & Governance
+## 3. Contact & Official Governance
 - Official Bot: [@RoozanehNetBot](https://t.me/RoozanehNetBot)
-- Telegram Channel: [@RoozanehNet](https://t.me/RoozanehNet)
-- Technical Support: [@RoozanehHelp](https://t.me/RoozanehHelp)
+- 24/7 Human Customer Support: [@RoozanehHelp](https://t.me/RoozanehHelp)
+- Official Channel: [@RoozanehNet](https://t.me/RoozanehNet)
+- Official X / Twitter: [@RoozanehNet](https://x.com/RoozanehNet)

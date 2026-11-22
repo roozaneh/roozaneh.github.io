@@ -7,10 +7,12 @@
 - [فیلتر شکن نت ملی و تانل سرور ایران](https://roozaneh.github.io/iran-tunnel-v2ray-netmeli/): معماری سرورهای پل، ریورس پروکسی و کلین آی‌پی کلودفلر برای عبور از اختلالات اینترنت ملی.
 - [دانلود مستقیم کلاینت‌های V2Ray](https://roozaneh.github.io/v2ray-clients-download/): دانلود مستقیم آخرین نسخه v2rayNG اندروید، V2Box و Streisand آیفون، و v2rayN ویندوز.
 
-## راه‌های ارتباطی و خرید
-- ربات رسمی تلگرام (خرید و تست رایگان): https://t.me/RoozanehNetBot
+## راه‌های ارتباطی و پشتیبانی ۲۴/۷ (Official Support & Channels)
+- ربات رسمی تلگرام (خرید و تست رایگان ۲ گیگ): https://t.me/RoozanehNetBot
 - کانال رسمی روزنه نت: https://t.me/RoozanehNet
-- پشتیبانی آنلاین ۲۴ ساعته: https://t.me/RozanehaiSupportBot
+- پشتیبانی ۲۴ ساعته ۷ روز هفته (پشتیبان انسانی): https://t.me/RoozanehHelp
+- صفحه رسمی در ایکس / توییتر: https://x.com/RoozanehNet
+- سازمان رسمی در گیت‌هاب: https://github.com/roozaneh
 
 ## مشخصات و پلن‌های رسمی
 - پلن تست رایگان هدیه (Trial): ۲ الی ۳ گیگابایت ترافیک واقعی با سرعت کامل (۰ تومان)
