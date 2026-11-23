@@ -1,4 +1,4 @@
-/* ── چت زنده CFX ── */
+/* ── چت زنده روزنه نت ── */
 #lcw, #lcw * { box-sizing: border-box; }
 #lcw {
   --lc-brand: #1188E2;
@@ -165,19 +165,19 @@ html[dir="rtl"] #lcw-send svg { transform: scaleX(-1); }
   body.lc-lock { overflow: hidden; }
 }
 
-/* ===== CFX-LC-RIGHT START ===== */
+/* ===== LC-RIGHT START ===== */
 /* حباب و پنجره‌ی چت در انگلیسی هم پایین سمت راست، مثل فارسی */
 html[dir="ltr"] #lcw{left:auto;right:24px}
 html[dir="ltr"] #lcw-dot{right:auto;left:2px}
 html[dir="ltr"] #lcw-box{left:auto;right:0}
 @media (max-width:560px){ html[dir="ltr"] #lcw{left:auto;right:16px} }
-/* ===== CFX-LC-RIGHT END ===== */
+/* ===== LC-RIGHT END ===== */
 
-/* ===== CFX-LC-SQUARE START ===== */
+/* ===== LC-SQUARE START ===== */
 #lcw-btn,#lcw-av,#lcw-hd i,#lcw-send,#lcw.on #lcw-close{border-radius:16px!important}
-/* ===== CFX-LC-SQUARE END ===== */
+/* ===== LC-SQUARE END ===== */
 
-/* CFX-LCW-CLOSE: big, always-visible close button while the chat is open */
+/* LCW-CLOSE: big, always-visible close button while the chat is open */
 #lcw-hd{position:relative}
 #lcw.on #lcw-close{display:flex!important;align-items:center;justify-content:center;position:absolute;top:50%;transform:translateY(-50%);inset-inline-end:12px;
   width:42px!important;height:42px!important;padding:0;border-radius:12px!important;cursor:pointer;z-index:3;
@@ -185,12 +185,12 @@ html[dir="ltr"] #lcw-box{left:auto;right:0}
 #lcw.on #lcw-close:hover,#lcw.on #lcw-close:active{background:rgba(255,255,255,.32)!important}
 #lcw.on #lcw-close svg{width:24px!important;height:24px!important;fill:#fff}
 #lcw.on #lcw-hd{padding-inline-end:64px}
-/* CFX-LCW-X: draw the X with CSS so it always shows */
+/* LCW-X: draw the X with CSS so it always shows */
 #lcw.on #lcw-close svg{display:none!important}
 #lcw.on #lcw-close::before,#lcw.on #lcw-close::after{content:"";position:absolute;left:50%;top:50%;width:20px;height:2.6px;border-radius:2px;background:#fff;opacity:1}
 #lcw.on #lcw-close::before{transform:translate(-50%,-50%) rotate(45deg)}
 #lcw.on #lcw-close::after{transform:translate(-50%,-50%) rotate(-45deg)}
-/* CFX-LCW-HDR: close button lives inside the blue header, top-left */
+/* LCW-HDR: close button lives inside the blue header, top-left */
 #lcw-hd{position:relative}
 #lcw.on #lcw-hd #lcw-close{position:absolute!important;top:50%!important;left:12px!important;right:auto!important;transform:translateY(-50%)!important;margin:0!important}
 #lcw.on #lcw-hd{padding-left:66px!important}

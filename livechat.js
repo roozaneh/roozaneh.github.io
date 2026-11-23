@@ -3,17 +3,17 @@
   if (window.__lcInit) return;
   window.__lcInit = true;
 
-  var SID_KEY = 'cfx_lc_sid';
+  var SID_KEY = 'rooz_lc_sid';
   var POLL_MS = 3000;
   var sid = null, lastId = 0, timer = null, open = false, busy = false;
 
   var T = {
-    fa: { title:'پشتیبانی سی اف ایکس', on:'آنلاین', h:'سلام! خوش آمدید 👋',
+    fa: { title:'پشتیبانی روزنه نت', on:'آنلاین', h:'سلام! خوش آمدید 👋',
           p:'برای شروع گفتگو، لطفاً مشخصات خود را وارد کنید تا همکاران ما بتوانند بهتر راهنمایی‌تان کنند.',
           fn:'نام', ln:'نام خانوادگی', ph:'شماره موبایل', go:'شروع گفتگو', going:'لطفاً صبر کنید…',
           ta:'پیام خود را بنویسید…', note:'دستیار هوشمند پشتیبانی', noteAdmin:'کارشناس پشتیبانی — آنلاین',
           e1:'نام را وارد کنید', e2:'نام خانوادگی را وارد کنید', e3:'شماره موبایل معتبر نیست', e4:'خطا در اتصال' },
-    en: { title:'CustomizeFund Support', on:'Online', h:'Hi there! Welcome 👋',
+    en: { title:'Roozaneh Support', on:'Online', h:'Hi there! Welcome 👋',
           p:'Please enter your details so our team can assist you better.',
           fn:'First name', ln:'Last name', ph:'Mobile number', go:'Start chat', going:'Please wait…',
           ta:'Type your message…', note:'AI support assistant', noteAdmin:'Support specialist — online',
@@ -59,7 +59,7 @@
     el('lc-fn').placeholder = t('fn'); el('lc-ln').placeholder = t('ln'); el('lc-ph').placeholder = t('ph');
     el('lc-go').textContent = t('go'); el('lcw-ta').placeholder = t('ta');
     setNote();
-    el('lcw-av').textContent = lang() === 'en' ? 'I' : 'آ';
+    el('lcw-av').textContent = lang() === 'en' ? 'R' : 'ر';
   }
 
   function add(role, text) {
@@ -163,7 +163,12 @@
     if (!s) return;
     fetch('/api/livechat/poll?sid=' + encodeURIComponent(s) + '&after=0')
       .then(function (r) { return r.json(); }).then(function (j) {
-        if (!j || !j.ok || j.status === 'closed') { try { localStorage.removeItem(SID_KEY); } catch (x) {} return; }
+        if (!j || !j.ok || j.status === 'closed') {
+          try {
+            localStorage.removeItem(SID_KEY);
+          } catch (x) {}
+          return;
+        }
         sid = s; handledBy = j.handledBy || 'ai'; chatMode(); setNote();
         (j.messages || []).forEach(function (m) { add(m.role, m.text); lastId = Math.max(lastId, m.id || 0); });
         poll();
@@ -211,7 +216,7 @@
   else mount();
 })();
 
-/* CFX-LCW-CLOSE: Esc and the phone back button also close the chat */
+/* LCW-CLOSE: Esc and the phone back button also close the chat */
 (function(){
   var pushed = false, tries = 0;
   function w(){ return document.getElementById('lcw'); }
@@ -230,7 +235,7 @@
   }
   watch();
 })();
-/* CFX-LCW-HDR: move the close button into the header */
+/* LCW-HDR: move the close button into the header */
 (function(){
   var n = 0;
   (function fix(){

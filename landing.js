@@ -37,26 +37,9 @@ function __lpRaf(fn, ms){
     rv.forEach(function(el){ el.classList.add("in"); });
   }
 
-  /* ---- far background candles (deterministic, decorative) ---- */
+  /* ---- far background candles removed ---- */
   var cv = document.getElementById("candles");
-  if (cv){
-    var seed = 20240822, W = 1600, H = 400, n = 46, step = W/n, y = 250, out = "";
-    function rnd(){ seed = (seed*1103515245 + 12345) & 0x7fffffff; return seed/0x7fffffff; }
-    for (var i=0;i<n;i++){
-      var drift = (rnd()-0.46)*26;
-      var o = y, c = Math.max(60, Math.min(340, y + drift));
-      var hi = Math.min(o,c) - rnd()*22, lo = Math.max(o,c) + rnd()*22;
-      var x = i*step + step*0.5;
-      var top = Math.min(o,c), h = Math.max(3, Math.abs(c-o));
-      var up = c < o;
-      var op = (0.05 + (i/n)*0.07).toFixed(3);
-      out += '<line x1="'+x.toFixed(1)+'" y1="'+hi.toFixed(1)+'" x2="'+x.toFixed(1)+'" y2="'+lo.toFixed(1)+'" stroke="#4FA9FA" stroke-width="1.1" opacity="'+op+'"/>';
-      out += '<rect x="'+(x-step*0.28).toFixed(1)+'" y="'+top.toFixed(1)+'" width="'+(step*0.56).toFixed(1)+'" height="'+h.toFixed(1)+'" '
-           + (up ? 'fill="#7CC0FA" opacity="'+op+'"' : 'fill="none" stroke="#4FA9FA" stroke-width="1.1" opacity="'+op+'"') + '/>';
-      y = c;
-    }
-    cv.innerHTML = out;
-  }
+  if (cv){ cv.innerHTML = ""; }
 
   /* ---- hero sparkline ---- */
   var sp = document.getElementById("spark");
@@ -136,41 +119,41 @@ function __lpRaf(fn, ms){
      I18N — fa / en, plain JS, no dependency
      ============================================================ */
   var T = {
-    "doc.title":       ["سی اف ایکس · نمونه‌ی بصری لندینگ","CustomizeFund · Landing visual preview"],
-    "doc.desc":        ["نمونه‌ی بصری: تأمین سرمایه، تحلیل هوشمند پیش از ورود، و شناخت بهتر عملکرد.","Visual preview: funding, pre-trade analysis and a clearer view of your performance."],
+    "doc.title":       ["روزنه (Roozaneh) | اینترنت آزاد، ضد تحریم و پرسرعت","Roozaneh | Unrestricted, Fast & Anti-Censorship VPN"],
+    "doc.desc":        ["سرور و کانفیگ‌های اختصاصی ضد تحریم و دور زدن نت ملی با سرعت بالا، پروتکل‌های VLESS و Reality، ترافیک واقعی ۱:۱ + ۲ گیگابایت تست رایگان در ربات تلگرام","High-speed dedicated VPN servers and anti-filtering configs for bypassing restrictions, VLESS & Reality protocols, 1:1 true traffic + 2GB free test."],
 
     "nav.aria":        ["ناوبری اصلی","Main navigation"],
-    "nav.home":         ["خانه","Home"],
-    "nav.plans":       ["پلن‌ها","Plans"],
-    "nav.sim":         ["CFX Trader","CFX Trader"],
-    "nav.learn":       ["آموزش","Learn"],
-    "nav.rules":       ["قوانین","Rules"],
+    "nav.home":        ["خانه","Home"],
+    "nav.plans":       ["پلن‌های اشتراک","Subscription Plans"],
+    "nav.sim":         ["تست رایگان ۲ گیگ","2GB Free Test"],
+    "nav.learn":       ["راهنمای اتصال","Connection Guide"],
+    "nav.rules":       ["تعرفه‌ها","Pricing"],
     "nav.faq":         ["سؤالات متداول","FAQ"],
-    "nav.about":       ["درباره ما","About"],
+    "nav.about":       ["درباره روزنه","About Roozaneh"],
     "lang.aria":       ["تغییر زبان","Change language"],
     "menu.open":       ["باز کردن منو","Open menu"],
     "menu.close":      ["بستن منو","Close menu"],
     "menu.aria":       ["منوی اصلی","Main menu"],
-    "tkr.aria":        ["قیمت بازارها","Market prices"],
+    "tkr.aria":        ["وضعیت شبکه","Network Status"],
     "rail.aria":       ["ناوبری سریع","Quick navigation"],
     "rail.home":       ["خانه","Home"],
-    "rail.an":         ["تحلیل","Analysis"],
-    "rail.jr":         ["ژورنال","Journal"],
+    "rail.an":         ["پلن‌ها","Plans"],
+    "rail.jr":         ["تست رایگان","Free Trial"],
     "rail.more":       ["بیشتر","More"],
     "rail.enter":      ["ورود","Open"],
-    "k.daysDesc":      ["الزام معامله در حداقل تعداد روز پیش از تسویه","Requires trading on a minimum number of days before payout"],
-    "pk.pick":         ["دریافت اشتراک روزنه","Get Rozaneh Subscription"], /* CFX-CK3 */
+    "k.daysDesc":      ["بدون محدودیت زمانی در مصرف حجم و اشتراک","No time limit on volume and subscription usage"],
+    "pk.pick":         ["دریافت اشتراک روزنه","Get Roozaneh Subscription"],
     "pk.type":         ["نوع پلن","Plan type"],
     "pk.two":          ["پلن‌های حجمی","Volume Plans"],
     "pk.real":         ["مصرف آزاد (Pay As You Go)","Pay As You Go"],
     "pk.size":         ["حجم اشتراک (ترافیک)","Plan Volume"],
     "pk.once":         ["پرداخت یک‌باره","one-time"],
     "pk.pop":          ["محبوب","Popular"],
-    "logo.alt":        ["نشان سی اف ایکس","CustomizeFund mark"],
+    "logo.alt":        ["نشان روزنه","Roozaneh mark"],
 
-    "cta.app":         ["ورود به پنل کاربری","Dashboard"],
-"cta.dl":          ["دانلود اپلیکیشن","Download the app"],
-    "cta.plan":        ["کاستومایز پلن","Build your own plan"],
+    "cta.app":         ["ورود به ربات تلگرام","Open Telegram Bot"],
+    "cta.dl":          ["دانلود کلاینت‌های ویتوری","Download V2Ray Clients"],
+    "cta.plan":        ["انتخاب پلن دلخواه","Choose Your Plan"],
 
     "hero.h1":         ['دسترسی آزاد<br>اختصاصی و بدون تحریم',
                         'Free Access<br>Built for Everyone'],
@@ -178,82 +161,84 @@ function __lpRaf(fn, ms){
                         "Bypass restrictions with Rozaneh: high-speed network with low ping for gamers, seamless access to global tools for developers, and stable dedicated IPs."],
     "hero.note":       ["<b>اینترنت پایدار و بدون قطعی</b>؛ ابزاری برای آزادی دیجیتال.",
                         "<b>Stable & fast connection</b>; unrestricted digital access."],
-    "hero.asideAria":  ["نمای نمونه از پارامترهای پلن","Sample view of the plan parameters"],
-    "ap.ttl":          ["پنل آنالیز","Analytics panel"],
-    "ap.bal":          ["بالانس","Balance"],
-    "ap.eq":           ["اکویتی","Equity"],
-    "ap.pl":           ["سود / زیان","Profit / Loss"],
-    "ap.feed":         ["جریان زنده","Live feed"],
-"ap.syms":         ["نمادهای معامله‌شده","Symbols traded"],
-        "ap.wr":           ["Win rate","Win rate"],
-    "hero.ribbon":     ["نمای پلن","Plan preview"],
+    "hero.asideAria":  ["نمای کیفیت و سرعت اتصال روزنه","Overview of Roozaneh connection quality and speed"],
+    "ap.ttl":          ["کیفیت اتصال و شبکه","Network Quality & Status"],
+    "ap.bal":          ["ترافیک","Traffic"],
+    "ap.eq":           ["پایداری","Stability"],
+    "ap.pl":           ["سرعت لحظه‌ای","Live Speed"],
+    "ap.feed":         ["پینگ لحظه‌ای","Live Ping"],
+    "ap.syms":         ["پروتکل‌های فعال","Active Protocols"],
+    "ap.wr":           ["درصد پایداری","Uptime Rate"],
+    "hero.ribbon":     ["سرویس پرسرعت روزنه","Roozaneh High-Speed Service"],
 
-    "tag.demo":        ["نمونه‌ی نمایشی","Demo view"],
-    "tag.adjust":      ["قابل تنظیم","Adjustable"],
-    "tag.live":        ["به‌روزرسانی زنده","Live update"],
-    "tag.before":      ["پیش از فعال شدن","Before it triggers"],
-    "tag.auto":        ["ثبت خودکار","Logged automatically"],
-    "tag.ai":          ["تحلیل هوش مصنوعی","AI analysis"],
+    "tag.demo":        ["تست ۲ گیگابایت","2 GB Free Trial"],
+    "tag.adjust":      ["ترافیک واقعی ۱:۱","True 1:1 Traffic"],
+    "tag.live":        ["تحویل آنی","Instant Delivery"],
+    "tag.before":      ["پینگ بهینه","Low Ping"],
+    "tag.auto":        ["بدون قطعی","Zero Disconnect"],
+    "tag.ai":          ["پروتکل Reality و VLESS","Reality & VLESS Protocols"],
 
-    "k.t1":            ["تارگت سود مرحله ۱","Stage 1 profit target"],
-    "k.t2":            ["تارگت سود مرحله ۲","Stage 2 profit target"],
-    "k.dd":            ["سقف افت روزانه","Daily drawdown limit"],
-    "k.md":            ["سقف افت کلی","Overall drawdown limit"],
+    "k.t1":            ["تعداد کاربر همزمان","Concurrent Users"],
+    "k.t2":            ["پروتکل‌های اتصال","Protocols"],
+    "k.dd":            ["کیفیت پینگ","Gaming Ping"],
+    "k.md":            ["موقعیت سرورها","Server Locations"],
     "k.split":         ["پایداری سرورها","Server Uptime"],
-    "k.split2":        ["درصد تقسیم سود","Profit split percentage"],
-  "lc.title":       ["اگر سوالی دارید بپرسید","Have a question? Ask away"],
-  "lc.ph":          ["سوالت را بنویس…","Type your question…"],
-  "lc.send":        ["ارسال","Send"],
-  "lc.h1":          ["تحلیل معاملات","Trade analysis"],
-  "lc.h2":          ["آموزش هدفمند","Targeted learning"],
-  "lc.h3":          ["پاسخ آنی","Instant answers"],
-  "lc.limit":       ["برای ادامه‌ی گفتگو وارد اپ شو.","Sign in to continue the conversation."],
-  "lc.cta":         ["ورود به پنل کاربری","Dashboard"],
-    "k.eqdd":          ["افت روزانه از بالاترین اکوییتی","Daily drawdown from peak equity"],
-    "k.eqddDesc":      ["سقف افت روزانه از بالاترین اکوییتی همان روز سنجیده می‌شود","Measured from that day’s peak equity instead of the opening balance"],
-    "k.rShare":       ["سهم سود","Profit Share"],
-    "k.growTtl":      ["امکانات و استانداردهای تضمین‌شده در تمامی اشتراک‌های روزنه:","Security & performance standards guaranteed on all Rozaneh plans:"],
-    "k.realN1": ["بررسی و پرداخت سود روز شنبه‌ی هر هفته انجام می‌شود.","Profit is reviewed and paid every Saturday."],
-    "k.realN2": ["برای برداشت سود، حساب باید به تارگت ۱۰٪ رسیده باشد.","To withdraw profit, the account must have reached the 10% target."],
-    "k.sumT1": ["تعداد کاربر همزمان","Concurrent Users"],
-    "k.sumT2": ["پروتکل‌های اتصال","Protocols"],
-    "k.sumDL": ["کیفیت پینگ","Gaming Ping"],
-    "k.sumML": ["موقعیت سرورها","Server Locations"],
-    "k.days":          ["حداقل روز معاملاتی","Minimum trading days"],
-    "k.ins":           ["بیمه‌ی حساب","Account insurance"],
-    "k.insDesc":       ["پوشش یک‌باره در صورت رسیدن به سقف افت","A one-time cover if the drawdown limit is reached"],
-    "k.flt":           ["ریسک شناور","Floating risk"],
-    "k.fltDesc":       ["۳ درصد در تمام مراحل","3% in all stages"],
-    "k.stages":        ["مرحله‌ها","Stages"],
-    "k.ddmd":          ["افت روزانه و کلی","Daily and overall drawdown"],
-    "k.yourSplit":     ["پهنای باند سرور","Port Bandwidth"],
+    "k.split2":        ["پهنای باند پورت","Port Bandwidth"],
+    "lc.title":        ["اگر سوالی دارید بپرسید","Have a question? Ask away"],
+    "lc.ph":           ["سوالت را بنویس…","Type your question…"],
+    "lc.send":         ["ارسال","Send"],
+    "lc.h1":           ["سرعت و پایداری","Speed & Stability"],
+    "lc.h2":           ["راهنمای اتصال","Connection Guide"],
+    "lc.h3":           ["پاسخ آنی","Instant answers"],
+    "lc.limit":        ["برای دریافت تست رایگان یا خرید اشتراک وارد ربات تلگرام شوید.","Open our Telegram bot to get a free trial or purchase a plan."],
+    "lc.cta":          ["ورود به ربات تلگرام","Open Telegram Bot"],
+    "k.eqdd":          ["آی‌پی اختصاصی و تمیز","Clean Dedicated IP"],
+    "k.eqddDesc":      ["آی‌پی سرورها کاملاً تمیز و بدون نشت، مناسب گیمینگ و وبگردی پرسرعت","Server IPs are pristine and leak-free, optimal for gaming and high-speed browsing"],
+    "k.rShare":        ["ترافیک واقعی ۱:۱","True 1:1 Traffic"],
+    "k.growTtl":       ["امکانات و استانداردهای تضمین‌شده در تمامی اشتراک‌های روزنه:","Security & performance standards guaranteed on all Rozaneh plans:"],
+    "k.realN1":        ["تحویل آنی و خودکار بلافاصله پس از پرداخت در ربات تلگرام.","Instant automated delivery in Telegram bot right after purchase."],
+    "k.realN2":        ["حجم دوره‌های قبلی در هنگام تمدید نمی‌سوزد و منتقل می‌شود.","Unused data rolls over automatically upon renewal."],
+    "k.sumT1":         ["تعداد کاربر همزمان","Concurrent Users"],
+    "k.sumT2":         ["پروتکل‌های اتصال","Protocols"],
+    "k.sumDL":         ["کیفیت پینگ","Gaming Ping"],
+    "k.sumML":         ["موقعیت سرورها","Server Locations"],
+    "k.days":          ["مدت اعتبار اشتراک","Subscription Validity"],
+    "k.ins":           ["ضمانت کیفیت","Quality Guarantee"],
+    "k.insDesc":       ["تضمین بازگشت کامل وجه در صورت عدم رضایت یا اختلال در شبکه","Full money-back guarantee in case of service disruption"],
+    "k.flt":           ["پروتکل ضد فیلتر","Anti-Filter Protocol"],
+    "k.fltDesc":       ["پروتکل Reality و VLESS بهینه‌سازی‌شده برای ایران","Reality & VLESS protocols optimized for Iranian networks"],
+    "k.stages":        ["لوکیشن‌ها","Locations"],
+    "k.ddmd":          ["پایداری و سرعت","Speed & Stability"],
+    "k.yourSplit":     ["پورت سرور دیتاسنتر","Datacenter Port Speed"],
 
-    "sim.h2":          ['چالش را <em>بدون ریسک</em> تجربه کن','Try the challenge <em>with no risk</em>'],
-    "sim.body":        ["پیش از خرید، حساب مجازی از ۵ هزار تا ۲۰۰ هزار دلار انتخاب کن و روی چارت زنده با قیمت‌های واقعی معامله کن. حجم، حد سود و حد ضرر را تعیین کن؛ اکویتی، سود و ضرر و دراوداون را لحظه‌به‌لحظه ببین و اگر به خط قرمز نزدیک شدی هشدار بگیر. مراحل چالش را همان‌طور که هست طی کن و در پایان بازده و وین‌ریت خودت را ببین.",
-                        "Before you buy, pick a virtual account from $5,000 to $200,000 and trade a live chart on real prices. Set your lot size, take profit and stop loss; watch equity, open P/L and drawdown move moment by moment, and get an alert when you come close to the red line. Go through the challenge phases exactly as they are, and see your own return and win rate at the end."],
+    "sim.h2":          ['کیفیت اتصال روزنه را <em>رایگان</em> تست کن','Try Roozaneh Connection <em>Free of Charge</em>'],
+    "sim.body":        ["قبل از خرید اشتراک، با دریافت ۲ گیگابایت ترافیک تست ۴۸ ساعته از ربات تلگرام، کیفیت پینگ، سرعت دانلود و دور زدن نت ملی را روی همراه اول، ایرانسل و اینترنت ثابت تست کن.",
+                        "Test ping quality, download speed, and circumvention of national intranet restrictions on MCI, Irancell, and ADSL with 2GB free test traffic for 48 hours before purchasing."],
     "sim.free":        ["کاملاً رایگان","Completely free"],
-    "sim.card":        ["CFX Trader","CFX Trader"],
-    "sim.acct":        ["حساب مجازی ۲۵٬۰۰۰ دلاری","$25,000 virtual account"],
-    "sim.balance":     ["بالانس","Balance"],
-    "sim.equity":      ["اکویتی","Equity"],
-    "sim.pnl":         ["سود و ضرر باز","Open P/L"],
-    "sim.dd":          ["دراوداون","Drawdown"],
-    "sim.alert":       ["اگر به سقف افت روزانه نزدیک شوی، پیش از رسیدن به خط قرمز هشدار می‌گیری.",
-                        "As you approach the daily drawdown limit, you are alerted before you reach the red line."],
-    "sim.lot":         ["حجم","Lot"],
-    "sim.buy":         ["خرید","Buy"],
-    "sim.sell":        ["فروش","Sell"],
+    "sim.card":        ["تست زنده شبکه","Live Network Test"],
+    "sim.acct":        ["ترافیک هدیه ۲ گیگابایت","2 GB Free Test Quota"],
+    "sim.balance":     ["ترافیک باقیمانده","Remaining Traffic"],
+    "sim.equity":      ["پایداری اتصال","Connection Stability"],
+    "sim.pnl":         ["سرعت دانلود","Download Speed"],
+    "sim.dd":          ["پینگ شبکه","Network Ping"],
+    "sim.alert":       ["اتصال پایدار و رمزنگاری‌شده بدون افت سرعت یا نشت DNS.",
+                        "Stable encrypted connection with zero throttling and DNS leak protection."],
+    "sim.lot":         ["حجم ترافیک","Data Volume"],
+    "sim.buy":         ["دریافت اشتراک","Get Subscription"],
+    "sim.sell":        ["تست رایگان","Free Trial"],
 
-    "plan.h2": ["پلن‌های اختصاصی <em>روزنه</em>", "Rozaneh <em>Dedicated Plans</em>"], /* CFX-CK16 */
-    "plan.body": ["پلن خود را بین بسته‌های حجمی یا مصرف آزاد انتخاب کنید؛ تمامی پلن‌ها بدون محدودیت در تعداد کاربر و دستگاه متصل هستند.", "Choose between volume or unlimited plans; all plans support up to 5 concurrent users seamlessly."], /* CFX-CK8 */
-    "plan.params":     ["پارامترهای پلن","Plan parameters"],"plan.fold":     ["تنظیم پارامترهای پلن","Adjust plan parameters"],
-    "plan.opts":       ["گزینه‌های حساب","Account options"],
-    "plan.sum":        ["خلاصه‌ی پلن","Plan summary"],
-    "plan.foot":       ["این پنل یک ماکاپ بصری است. مقادیر را جابه‌جا کن تا ببینی پلن چطور با قوانین تو شکل می‌گیرد.",
-                        "This panel is a visual mockup. Move the values to see how the plan takes shape around your rules."],
-    "plan.ctaNote":    ["پلن خودت را در اپ بساز و از همان‌جا چالش را شروع کن.","Build your plan in the app and start the challenge from there."],
+    "plan.h2":         ["پلن‌های اختصاصی <em>روزنه</em>", "Roozaneh <em>Dedicated Plans</em>"],
+    "plan.body":       ["پلن خود را بین بسته‌های حجمی یا مصرف آزاد انتخاب کنید؛ تمامی پلن‌ها بدون محدودیت در تعداد کاربر و دستگاه متصل هستند.", "Choose between volume or unlimited plans; all plans support up to 5 concurrent users seamlessly."],
+    "plan.params":     ["ویژگی‌های سرویس","Service Features"],
+    "plan.fold":       ["تنظیم پارامترهای پلن","Adjust Plan Parameters"],
+    "plan.opts":       ["گزینه‌های اشتراک","Subscription Options"],
+    "plan.sum":        ["خلاصه‌ی اشتراک","Subscription Summary"],
+    "plan.foot":       ["تمامی اشتراک‌های روزنه دارای ضمانت بازگشت وجه و تانل اختصاصی ایران به سرورهای اروپا هستند.",
+                        "All Roozaneh subscriptions feature money-back guarantee and dedicated Iran tunnel to European servers."],
+    "plan.ctaNote":    ["برای فعال‌سازی و دریافت فوری لینک اتصال، وارد ربات تلگرام روزنه شوید.",
+                        "Open Roozaneh Telegram bot for instant subscription activation and config delivery."],
 
-    "fp.h2":           ["مسیر راه‌اندازی و اتصال به روزنه","Getting Connected to Rozaneh"],
+    "fp.h2":           ["مسیر راه‌اندازی و اتصال به روزنه","Getting Connected to Roozaneh"],
     "fp.body":         ["چهار قدم شفاف از انتخاب تا اتصال پایدار؛ بدون معطلی و بدون پیچیدگی فنی.",
                         "Four simple steps from plan selection to stable connection. No hassle, full transparency."],
     "fp.tag1":         ["انتخاب یا تست","Choose or Test"],
@@ -274,33 +259,33 @@ function __lpRaf(fn, ms){
                         "Check remaining traffic anytime in the bot. When you renew, leftover data never expires and rolls over to your next subscription."],
     "fp.note":         ["💡 برای شروع تست رایگان ۲۴ ساعته یا دریافت سریع اشتراک، کافیست وارد ربات تلگرام <b>@RoozanehNetBot</b> شوید.",
                         "💡 To get your 24-hour free trial or subscription, simply open our Telegram bot <b>@RoozanehNetBot</b>."],
-    "an.h2":           ["<em>همراهی هوشمند</em> در کنار سرمایه؛<br>فراتر از یک حساب معاملاتی", "<em>Smart support</em> behind your capital,<br>more than just a trading account"],
-    "an.body":         ["ما فقط سرمایه در اختیارتان نمی‌گذاریم؛ بلکه مسیر عبور از چالش و رشد حساب را با ابزارهای پیشرفته‌ی هوش مصنوعی هموار می‌کنیم. از تحلیل موقعیت‌ها و اعتبارسنجی ریسک پیش از معامله گرفته تا نظارت بر پارامترهای روانشناسی و حفظ سقف افت حساب، دستیار هوشمند شما در تمام لحظات بازار همراه شماست تا با انضباط کامل و کمترین خطا ترید کنید.", "We don't just give you capital. We make the path through the challenge, and the growth of your account after it, smoother with advanced AI tools. From analyzing positions and checking risk before you trade to tracking your trading psychology and protecting your drawdown limits, your smart assistant is with you at every moment in the market, so you can trade with full discipline and fewer mistakes."],
-    "an.order":        ["سفارش پندینگ","Pending order"],
-    "an.gold":         ["طلا در برابر دلار","Gold vs US dollar"],
-    "an.entry":        ["قیمت ورود","Entry price"],
-    "an.sl":           ["حد ضرر","Stop loss"],
-    "an.tp":           ["حد سود","Take profit"],
-    "an.lot":          ["حجم","Lot size"],
-    "an.gap":          ["فاصله تا قیمت فعلی","Distance to current price"],
-    "an.riskT":        ["سطح ریسک: متوسط","Risk level: moderate"],
-    "an.riskD":        ["حجم با اندازه‌ی حساب سازگار است، اما فاصله‌ی ورود تا قیمت فعلی کم است.",
-                        "The lot size fits the account, but the entry sits close to the current price."],
-    "an.sum":          ["جمع‌بندی تحلیل","Analysis summary"],
-    "an.c1t":          ["نسبت ریسک به ریوارد","Risk-to-reward ratio"],
-    "an.c1d":          ["حد سود نسبت به حد ضرر در محدوده‌ی قابل قبول است.","Take profit sits in an acceptable range against the stop loss."],
-    "an.c2t":          ["تناسب حجم با اندازه‌ی حساب","Lot size against account size"],
-    "an.c2d":          ["ریسک این معامله از سرمایه‌ی حساب.","What this trade risks out of the account capital."],
-    "an.c3t":          ["فاصله‌ی ورود تا قیمت فعلی","Distance from entry to current price"],
-    "an.c3d":          ["سفارش نزدیک قیمت لحظه‌ای است و ممکن است زود فعال شود.","The order sits near the live price and may trigger early."],
-    "an.c4t":          ["تطبیق با سقف افت روزانه","Against the daily drawdown limit"],
-    "an.c4d":          ["در صورت خوردن حد ضرر، از سقف روزانه عبور نمی‌کنی.","If the stop is hit, you stay inside the daily limit."],
-    "an.c5t":          ["تطبیق با سقف افت کلی","Against the overall drawdown limit"],
-    "an.c5d":          ["فاصله‌ی باقی‌مانده تا سقف افت کلی حساب.","How much room is left before the account's overall limit."],
-    "an.m1":           ["ریسک معامله","Trade risk"],
-    "an.m2":           ["بازده هدف","Target return"],
+    "an.h2":           ["<em>پایداری بی‌نظیر</em> و پینگ پایین؛<br>فراتر از یک فیلترشکن معمولی", "<em>Unrivaled Stability</em> & Low Ping,<br>More than a standard VPN"],
+    "an.body":         ["روزنه با بهره‌گیری از سرورهای اختصاصی و تانل مستقیم به هلند و انگلستان، ترافیکی ۱:۱ و پایدار را حتی در شدیدترین اختلالات اینترنت بین‌الملل و نت ملی فراهم می‌کند. مناسب برای گیمرهای حساس به پینگ، توسعه‌دهندگان، و کاربرانی که به آی‌پی اختصاصی پایدار نیاز دارند.", "Roozaneh utilizes dedicated servers with direct tunneling to Netherlands and the UK, delivering stable 1:1 traffic even during heavy international or national filtering. Ideal for low-ping gamers, developers, and users requiring a stable dedicated IP."],
+    "an.order":        ["سرور اختصاصی","Dedicated Server"],
+    "an.gold":         ["موقعیت هلند / انگلیس","NL & UK Locations"],
+    "an.entry":        ["آی‌پی اختصاصی","Dedicated IP"],
+    "an.sl":           ["ضد نشت DNS","DNS Leak Protection"],
+    "an.tp":           ["سرعت ۱Gbps","1Gbps Port Speed"],
+    "an.lot":          ["حجم ترافیک","Data Volume"],
+    "an.gap":          ["پینگ بهینه","Low Latency"],
+    "an.riskT":        ["وضعیت شبکه: کاملاً پایدار","Network Status: Excellent"],
+    "an.riskD":        ["اتصال پرسرعت، بدون تاخیر و بدون قطعی در تمام ساعات شبانه‌روز.",
+                        "High-speed connection with zero lag and zero disconnects around the clock."],
+    "an.sum":          ["کیفیت سرویس","Service Quality"],
+    "an.c1t":          ["پایداری سرورها","Server Uptime"],
+    "an.c1d":          ["آپ‌تایم ۹۹.۹٪ سرورهای اختصاصی اروپا.","99.9% uptime on dedicated European servers."],
+    "an.c2t":          ["پروتکل‌های نسل جدید","Next-Gen Protocols"],
+    "an.c2d":          ["استفاده از Reality و VLESS جهت دور زدن فیلترینگ شدید.","Reality and VLESS protocols engineered to bypass deep packet inspection."],
+    "an.c3t":          ["پینگ زیر ۹۰ میلی‌ثانیه","Sub-90ms Ping"],
+    "an.c3d":          ["پینگ بسیار پایین مناسب برای گیمینگ و تماس‌های آنلاین.","Ultra-low ping optimized for online gaming and voice calls."],
+    "an.c4t":          ["بدون نشت آی‌پی و لوکیشن","Zero IP & Location Leak"],
+    "an.c4d":          ["حفظ کامل حریم خصوصی و عدم افشای هویت در اینترنت.","Total privacy preservation with zero IP leakage."],
+    "an.c5t":          ["پشتیبانی از تمامی سیستم‌عامل‌ها","Cross-Platform Support"],
+    "an.c5d":          ["پشتیبانی در اندروید، آیفون، ویندوز و مک.","Seamless support across Android, iOS, Windows, and macOS."],
+    "an.m1":           ["پایداری شبکه","Network Stability"],
+    "an.m2":           ["سرعت انتقال","Transfer Speed"],
 
-    "sm.h2":           ["قبل از خرید، کیفیت روزنه را رایگان امتحان کن","Try Rozaneh Quality Free Before You Buy"],
+    "sm.h2":           ["قبل از خرید، کیفیت روزنه را رایگان امتحان کن","Try Roozaneh Quality Free Before You Buy"],
     "sm.body":         ["۲ گیگابایت ترافیک تست رایگان ۴۸ ساعته؛ بدون نیاز به کارت بانکی، بدون ریسک و با تحویل فوری در ربات تلگرام.",
                         "2 GB free test traffic for 48 hours. No credit card required, instant bot delivery."],
     "sm.free":         ["مهلت ۴۸ ساعته رایگان","Free 48h access"],
@@ -310,67 +295,67 @@ function __lpRaf(fn, ms){
     "sm.pos":          ["پروتکل‌های فعال","Active Protocols"],
     "sm.dd":           ["پایداری تانل و سرورها","Tunnel & Server Stability"],
     "sm.lot":          ["پورت سرور","Server Port"],
-    "jr.h2":           ['ثبت خودکار معاملات، <em>تحلیل هوشمند عملکرد</em>','Trades logged automatically, <em>performance analysed intelligently</em>'],
-    "jr.body":         ["معامله که بسته شد، خودکار در ژورنال ثبت می‌شود. تو فقط چیزی را اضافه می‌کنی که هیچ دیتایی نشانش نمی‌دهد: حال آن لحظه. حس معامله، طبق‌پلن یا تکانشی، میزان اطمینان، و ستاپی که استفاده کردی. سپس هوش مصنوعی الگوهای رفتاری تو را شناسایی می‌کند — کجا از قوانین خودت فاصله گرفتی، کدام ستاپ برایت بهتر جواب داده، و کدام ساعت روز پرریسک‌تر بوده است.",
-                        "The moment a trade closes it is logged in your journal automatically. You only add what no data can show: how you felt at that moment. The emotion behind the trade, whether it followed your plan or was impulsive, how confident you were, and the setup you used. Then AI identifies your behavioural patterns — where you drifted from your own rules, which setups have worked better for you, and which hours of the day have carried more risk."],
-    "jf.t1":           ["معامله بسته می‌شود","The trade closes"],
-    "jf.d1":           ["ثبت در ژورنال خودکار انجام می‌شود؛ بدون کار دستی.","It is logged in your journal automatically — nothing to fill in."],
-    "jf.t2":           ["تو حال آن لحظه را اضافه می‌کنی","You add how it felt"],
-    "jf.d2":           ["تنها چیزی که هیچ دیتایی نشانش نمی‌دهد.","The one thing no data can show."],
-    "jf.t3":           ["هوش مصنوعی الگو را پیدا می‌کند","AI finds the pattern"],
-    "jf.d3":           ["آنچه در تک‌تک معامله‌ها دیده نمی‌شود، در مجموعشان پیداست.","What no single trade reveals becomes visible across all of them."],
-    "jr.card":         ["ثبت یک معامله","A single trade entry"],
-    "jr.closed":       ["معامله‌ی بسته‌شده","Closed trade"],
-    "jr.mood":         ["حس معامله","How the trade felt"],
-    "jr.exec":         ["نحوه‌ی اجرا","How it was executed"],
-    "jr.onplan":       ["طبق‌پلن","On plan"],
-    "jr.impulse":      ["تکانشی","Impulsive"],
-    "jr.conf":         ["میزان اطمینان","Confidence"],
-    "jr.setup":        ["ستاپ استفاده‌شده","Setup used"],
-    "jr.setupVal":    ["شکست ساختار و پولبک","Break of structure + pullback"],
-    "ji.sig":          ["یافته‌ی هوش مصنوعی","AI finding"],
-    "ji.quote":        ["در حالت انتقام‌جو، بیشترین فاصله را از پلن خودت گرفته‌ای — همان‌جایی که قوانین از همیشه لازم‌تر بودند.",
-                        "In a revenge state you drift furthest from your own plan — exactly where the rules matter most."],
-    "ji.f1t":          ["ساعت‌های پرریسک‌تر","Higher-risk hours"],
-    "ji.f1d":          ["کدام بازه‌های روز بیشترین انحراف را داشته‌اند.","Which parts of the day carry the most drift."],
-    "ji.f2t":          ["ستاپ‌های سازگارتر با تو","Setups that suit you"],
-    "ji.f2d":          ["کدام ستاپ را باثبات‌تر اجرا کرده‌ای.","Which setup you execute most consistently."],
-    "ji.f3t":          ["فاصله از قوانین خودت","Distance from your own rules"],
-    "ji.f3d":          ["کجا از چیزی که خودت نوشتی عبور کرده‌ای.","Where you stepped past what you wrote yourself."],
-    "jr.pat":          ["الگوهای رفتاری","Behavioural patterns"],
-    "jr.chartT":       ["نسبت معامله‌های طبق‌پلن در هر حالت روانی","Share of on-plan trades in each emotional state"],
-    "jr.hint":         ["هرچه بیشتر ثبت کنی، تصویر روشن‌تری از رفتار خودت می‌بینی: کجا از قوانینت فاصله گرفته‌ای، کدام ستاپ با کدام حال بهتر اجرا شده، و کدام ساعت‌ها برایت پرریسک‌تر بوده‌اند.",
-                        "The more you log, the clearer the picture of your own behaviour becomes: where you drifted from your rules, which setup you execute best in which state, and which hours have carried more risk for you."],
+    "jr.h2":           ['اتصال آسان در تمام دستگاه‌ها، <em>با پشتیبانی شبانه‌روزی</em>','Easy setup on all devices, <em>with 24/7 support</em>'],
+    "jr.body":         ["با آموزش‌های گام‌به‌گام و راهنمای تصویری، کانفیگ اختصاصی خود را در کمتر از ۱ دقیقه در برنامه‌های محبوب ویتوری مانند v2rayNG، V2Box و Hiddify فعال کنید. پشتیبانی فنی روزنه نیز به صورت ۲۴ ساعته در کنار شماست.",
+                        "With step-by-step visual guides, set up your personal config in under a minute on popular V2Ray apps like v2rayNG, V2Box, and Hiddify. Roozaneh technical support is available 24/7 to assist you."],
+    "jf.t1":           ["دریافت لینک اتصال","Receive Connection Link"],
+    "jf.d1":           ["دریافت فوری لینک سابسکریپشن اختصاصی از ربات تلگرام.","Instant automated delivery of your subscription link via Telegram bot."],
+    "jf.t2":           ["وارد کردن در برنامه","Import into App"],
+    "jf.d2":           ["کپی و اتصال با یک کلیک در اندروید، آیفون یا ویندوز.","One-click copy and import on Android, iOS, or Windows."],
+    "jf.t3":           ["اینترنت آزاد و پرسرعت","Fast & Free Internet"],
+    "jf.d3":           ["دسترسی بدون محدودیت به تمامی سایت‌ها و سرویس‌های جهانی.","Unrestricted high-speed access to all global websites and services."],
+    "jr.card":         ["راهنمای اتصال","Setup Guide"],
+    "jr.closed":       ["اتصال برقرار شد","Connected"],
+    "jr.mood":         ["وضعیت شبکه","Network Status"],
+    "jr.exec":         ["نوع پروتکل","Protocol Type"],
+    "jr.onplan":       ["VLESS Reality","VLESS Reality"],
+    "jr.impulse":      ["سریع و پایدار","Fast & Stable"],
+    "jr.conf":         ["کیفیت پینگ","Ping Quality"],
+    "jr.setup":        ["لوکیشن سرور","Server Location"],
+    "jr.setupVal":     ["هلند و انگلیس","Netherlands & UK"],
+    "ji.sig":          ["ویژگی متمایز روزنه","Roozaneh Key Feature"],
+    "ji.quote":        ["تانل اختصاصی ایران به سرورهای خارجی، قطعی‌های زمان نت ملی را به صفر می‌رساند.",
+                        "Dedicated Iranian relay tunnel eliminates disconnects during national intranet filters."],
+    "ji.f1t":          ["سازگار با تمامی اپراتورها","All ISPs Supported"],
+    "ji.f1d":          ["پشتیبانی کامل از همراه اول، ایرانسل، رایتل و اینترنت خانگی.","Full support for MCI, Irancell, Rightel, and all fixed home ISPs."],
+    "ji.f2t":          ["آی‌پی تمیز و اختصاصی","Clean Dedicated IPs"],
+    "ji.f2d":          ["مناسب برای سرویس‌های بین‌المللی و ابزارهای هوش مصنوعی بدون ارور بات.","Ideal for global online services and AI platforms without bot flags."],
+    "ji.f3t":          ["انتقال حجم باقیمانده","Rollover Data"],
+    "ji.f3d":          ["حجم مصرف‌نشده دوره قبل با تمدید اشتراک نمی‌سوزد.","Unused data rolls over automatically upon renewal."],
+    "jr.pat":          ["توزیع پروتکل‌ها","Protocols Distribution"],
+    "jr.chartT":       ["سرعت و پایداری در اپراتورهای مختلف","Speed and stability across different ISPs"],
+    "jr.hint":         ["با اشتراک روزنه نت، کیفیت واقعی وبگردی، استریم ویدیو با کیفیت 4K و بازی‌های آنلاین بدون پکت‌لاس را تجربه کنید.",
+                        "Experience true high-speed browsing, 4K streaming, and packet-loss-free gaming with Roozaneh Network."],
 
-    "mood.calm":       ["آرام","Calm"],
-    "mood.sure":       ["مطمئن","Confident"],
-    "mood.anx":        ["مضطرب","Anxious"],
-    "mood.rev":        ["انتقام‌جو","Revenge"],
-    "mood.greed":      ["طمع","Greed"],
+    "mood.calm":       ["پایدار","Stable"],
+    "mood.sure":       ["پرسرعت","High Speed"],
+    "mood.anx":        ["پینگ بهینه","Low Ping"],
+    "mood.rev":        ["ضد فیلتر","Anti-Filter"],
+    "mood.greed":      ["تانل اختصاصی","Dedicated Tunnel"],
 
-    "dl.sub":          ["مدیریت پلن، CFX Trader، آنالیز لحظه‌ای حساب و ژورنال هوشمند",
-                        "Plan management, CFX Trader, live account analytics and a smart journal."],
-    "dl.scan":         ["اسکن کن","Scan"],
-    "dl.ios":          ["برای آیفون","for iPhone"],
-    "dl.android":      ["برای اندروید","for Android"],
-    "dl.bazaar":       ["بازار","Bazaar"],
-    "dl.myket":        ["مایکت","Myket"],
-    "dl.alt":          ["نمای اپلیکیشن سی اف ایکس","CustomizeFund app preview"],
-    "band.t":          ['ابزار کامل معامله‌گر حرفه‌ای','The complete pro trader toolkit'],
+    "dl.sub":          ["پشتیبانی از تمامی کلاینت‌های استاندارد ویتوری در اندروید، آیفون، ویندوز و مک",
+                        "Supports all standard V2Ray clients across Android, iOS, Windows, and macOS"],
+    "dl.scan":         ["اسکن QR کد","Scan QR Code"],
+    "dl.ios":          ["برای آیفون (V2Box / Streisand)","for iOS (V2Box / Streisand)"],
+    "dl.android":      ["برای اندروید (v2rayNG / Hiddify)","for Android (v2rayNG / Hiddify)"],
+    "dl.bazaar":       ["کلاینت ویندوز (v2rayN)","Windows Client (v2rayN)"],
+    "dl.myket":        ["کلاینت مک","macOS Client"],
+    "dl.alt":          ["راهنمای اتصال روزنه نت","Roozaneh Network Connection Guide"],
+    "band.t":          ['اینترنت بدون مرز، پرسرعت و امن با روزنه','Borderland-free, High-speed & Secure Internet with Roozaneh'],
 
-    "ftr.about":       ["اولین پلتفرم هوشمند پراپ‌تریدینگ که با ترکیب تأمین سرمایه و ابزارهای هوشمند، محیطی ایجاد کرده تا در هر مرحله از مسیر، تصمیم‌های آگاهانه‌تری بگیرید؛ از انتخاب پلن مناسب تا تحلیل معاملات و بررسی عملکرد.",
-                        "The first intelligent prop-trading platform, combining funding with smart tools to create an environment where you make better-informed decisions at every step — from choosing the right plan to analysing your trades and reviewing your performance."],
-    "ftr.product":     ["محصول","Product"],
-    "ftr.sim":         ["CFX Trader","CFX Trader"],
-    "ftr.journal":     ["ژورنال معاملات","Trading journal"],
-    "ftr.articles":    ["مقالات آموزشی","Articles"],
-    "ftr.terms":       ["قوانین و مقررات","Terms and rules"],
-    "ftr.company":     ["شرکت","Company"],
-    "ftr.contact":     ["تماس با ما","Contact us"],
-    "ftr.support":     ["پشتیبانی","Support"],
-    "ftr.disc":        ["معامله در بازارهای مالی با ریسک همراه است و ممکن است به از دست رفتن سرمایه منجر شود. سی اف ایکس ابزار تحلیل و مدیریت چالش است؛ مشاوره‌ی سرمایه‌گذاری ارائه نمی‌دهد و هیچ سود یا نتیجه‌ای را تضمین نمی‌کند.",
-                        "Trading in financial markets carries risk and may lead to the loss of your capital. CustomizeFund is an analysis and challenge-management tool; it does not provide investment advice and does not guarantee any profit or outcome."],
-    "ftr.cpy":         ["© سی اف ایکس — تمامی حقوق محفوظ است.","© CustomizeFund — All rights reserved."],
+    "ftr.about":       ["روزنه نت، ارائه‌دهنده سرویس‌های اختصاصی عبور از فیلترینگ و تحریم با پایداری حداکثری، آی‌پی تمیز و پشتیبانی ۲۴ ساعته.",
+                        "Roozaneh Network provides dedicated, stable anti-censorship and anti-sanction VPN services with clean IPs and 24/7 technical support."],
+    "ftr.product":     ["سرویس‌ها","Services"],
+    "ftr.sim":         ["تست رایگان ۲ گیگابایت","2GB Free Trial"],
+    "ftr.journal":     ["راهنمای اتصال","Connection Guide"],
+    "ftr.articles":    ["دانشنامه و آموزش","Tutorials & Blog"],
+    "ftr.terms":       ["قوانین و ضمانت کیفیت","Terms & Quality Guarantee"],
+    "ftr.company":     ["روزنه نت","Roozaneh Network"],
+    "ftr.contact":     ["ارتباط با ما","Contact Us"],
+    "ftr.support":     ["پشتیبانی تلگرام","Telegram Support"],
+    "ftr.disc":        ["تمام سرویس‌های روزنه نت با ترافیک واقعی ۱:۱، بدون افت سرعت و با تانل اختصاصی برای تضمین اتصال پایدار ارائه می‌شوند.",
+                        "All Roozaneh services provide true 1:1 traffic without speed throttling and feature dedicated relay tunnels for stable connections."],
+    "ftr.cpy":         ["© ۲۰۲۶ روزنه نت (Roozaneh Network) — تمامی حقوق محفوظ است.","© 2026 Roozaneh Network — All rights reserved."],
 
     "sw.on":           ["فعال","On"],
     "sw.off":          ["غیرفعال","Off"]
@@ -388,6 +373,7 @@ function __lpRaf(fn, ms){
     var i = LANG === "fa" ? 0 : 1;
     var root = document.documentElement;
     root.setAttribute("lang", LANG);
+    root.setAttribute("data-lang", LANG);
     root.setAttribute("dir", LANG === "fa" ? "rtl" : "ltr");
     if (window.__tkrLang) window.__tkrLang(LANG === "en");
     var rl = document.querySelector("#rail-lang .rail-lang");
@@ -414,8 +400,8 @@ function __lpRaf(fn, ms){
       if (e) el.setAttribute("alt", e[i]);
     });
 
-    /* عنوان و توضیحات صفحه از Next می‌آید — اینجا دست نمی‌خورد */
-
+    if (T["doc.title"]) document.title = T["doc.title"][i];
+    if (meta && T["doc.desc"]) meta.setAttribute("content", T["doc.desc"][i]);
 
     document.querySelectorAll(".lang button").forEach(function(b){
       b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === LANG));
@@ -427,7 +413,14 @@ function __lpRaf(fn, ms){
   }
 
   document.querySelectorAll(".lang button").forEach(function(b){
-    b.addEventListener("click", function(){ var L = b.getAttribute("data-lang"); if(!L) return; setLang(L); try { localStorage.setItem("cfx-lang", LANG); } catch(e){} });
+    b.addEventListener("click", function(){
+      var L = b.getAttribute("data-lang");
+      if(!L) return;
+      setLang(L);
+      try {
+        localStorage.setItem("rooz-lang", LANG);
+      } catch(e){}
+    });
   });
 
   /* ---- mobile menu ---- */
@@ -454,7 +447,9 @@ function __lpRaf(fn, ms){
 
   /* ---- initial language ---- */
   var saved = null;
-  try { saved = localStorage.getItem("cfx-lang"); localStorage.removeItem("propai-lang"); } catch(e){}
+  try {
+    saved = localStorage.getItem("rooz-lang");
+  } catch(e){}
   /* اولویت: انتخاب صریح کاربر > زبانی که سرور بر اساس دامنه تعیین کرده */
   var fromServer = document.documentElement.getAttribute("lang") === "en" ? "en" : "fa";
   setLang(saved === "en" || saved === "fa" ? saved : fromServer);
@@ -673,13 +668,13 @@ function __lpRaf(fn, ms){
   };
   var EXTRAS = {insurance:{defOn:false, eff:15}, floating:{defOn:true, eff:-15}, eqdd:{defOn:false, eff:-5}};
 
-  var mode = 'two', cur = 'p75g', csz = 0; /* CFX-CS */
+  var mode = 'two', cur = 'p75g', csz = 0;
   function syncPick(){
     try{
       var el = document.querySelector('.pk-pick');
       if(!el) return;
-      var __ex = Array.prototype.slice.call(document.querySelectorAll('.sw[data-key]')).filter(function(b){return b.getAttribute('aria-checked')==='true';}).map(function(b){return b.getAttribute('data-key');}).join(',');
-      el.setAttribute('href', '/app?section=builder&plan=' + (csz ? 'p' + csz : cur) + '&mode=' + mode + '&buy=1&ext=' + __ex);
+      var planParam = (csz ? csz + 'gb' : cur);
+      el.setAttribute('href', 'https://t.me/RoozanehNetBot?start=plan_' + planParam + '_' + mode);
     }catch(e){}
   }
 
@@ -713,37 +708,37 @@ function __lpRaf(fn, ms){
       el.style.display = 'none';
     });
   }
-  /* مراحل رشد حساب ریل — آینه‌ی GROWTH_MULT در InlinePlanBuilder */
   var ROZ_FEATURES = [
     {
       emoji: '⚡',
-      title: 'سرعت و پایداری شبکه',
-      desc: 'اتصال روان بدون لودینگ با ترافیک واقعی ۱:۱'
+      title: ['سرعت و پایداری شبکه', 'High Speed & Stability'],
+      desc: ['اتصال روان بدون لودینگ با ترافیک واقعی ۱:۱', 'Smooth connection with true 1:1 traffic']
     },
     {
       emoji: '🌍',
-      title: 'لوکیشن‌های اختصاصی',
-      desc: '<span class="flag-pill">🇬🇧 انگلیس</span> <span class="flag-pill">🇳🇱 هلند</span> <span class="flag-pill iran">🇮🇷 تانل ایران</span>'
+      title: ['لوکیشن‌های اختصاصی', 'Dedicated Locations'],
+      desc: ['<span class="flag-pill">🇬🇧 انگلیس</span> <span class="flag-pill">🇳🇱 هلند</span> <span class="flag-pill iran">🇮🇷 تانل ایران</span>',
+             '<span class="flag-pill">🇬🇧 UK</span> <span class="flag-pill">🇳🇱 Netherlands</span> <span class="flag-pill iran">🇮🇷 Iran Tunnel</span>']
     },
     {
       emoji: '🛡️',
-      title: 'ضد نشت DNS و IP',
-      desc: 'آی‌پی تمیز و پایدار مناسب ترید'
+      title: ['ضد نشت DNS و IP', 'DNS & IP Leak Protection'],
+      desc: ['آی‌پی تمیز و پایدار بدون نشت', 'Clean and stable dedicated IP with zero leaks']
     },
     {
       emoji: '🤖',
-      title: 'سازگار با انواع هوش مصنوعی',
-      desc: 'دسترسی بدون تحریم به ChatGPT و Claude'
+      title: ['سازگار با انواع هوش مصنوعی', 'AI Compatible'],
+      desc: ['دسترسی بدون تحریم به ChatGPT و Claude', 'Unrestricted access to ChatGPT & Claude']
     },
     {
       emoji: '📱',
-      title: 'بدون محدودیت کاربر',
-      desc: 'اتصال همزمان انواع گوشی، لپ‌تاپ و تبلت'
+      title: ['بدون محدودیت کاربر', 'Unlimited Users'],
+      desc: ['اتصال همزمان انواع گوشی، لپ‌تاپ و تبلت', 'Concurrent connection for phones, laptops & tablets']
     },
     {
       emoji: '🤝',
-      title: 'ضمانت کیفیت و پشتیبانی',
-      desc: 'پشتیبانی ۲۴/۷ + تضمین بازگشت کامل وجه'
+      title: ['ضمانت کیفیت و پشتیبانی', 'Guarantee & Support'],
+      desc: ['پشتیبانی ۲۴/۷ + تضمین بازگشت کامل وجه', '24/7 support + full money-back guarantee']
     }
   ];
 
@@ -752,21 +747,24 @@ function __lpRaf(fn, ms){
     var grid = document.getElementById('lp-grow-grid');
     if(!box || !grid) return;
     box.style.display = '';
+    var en = isEn();
     
     grid.style.display = 'grid';
     grid.style.gridTemplateColumns = 'repeat(2, minmax(0, 1fr))';
     grid.style.gap = '10px';
-    grid.style.direction = 'rtl';
+    grid.style.direction = en ? 'ltr' : 'rtl';
     grid.style.marginTop = '10px';
 
     var html = '';
     for(var i = 0; i < ROZ_FEATURES.length; i++){
       var item = ROZ_FEATURES[i];
-      html += '<div class="lp-grow-box" style="display:flex;align-items:center;gap:10px;padding:9px 12px;min-height:54px;box-sizing:border-box;background:linear-gradient(155deg, rgba(24,28,37,0.92), rgba(15,23,42,0.85));border:1px solid rgba(255,255,255,0.08);border-radius:12px;direction:rtl;text-align:right">' +
+      var title = Array.isArray(item.title) ? (en ? item.title[1] : item.title[0]) : item.title;
+      var desc = Array.isArray(item.desc) ? (en ? item.desc[1] : item.desc[0]) : item.desc;
+      html += '<div class="lp-grow-box" style="display:flex;align-items:center;gap:10px;padding:9px 12px;min-height:54px;box-sizing:border-box;background:linear-gradient(155deg, rgba(24,28,37,0.92), rgba(15,23,42,0.85));border:1px solid rgba(255,255,255,0.08);border-radius:12px;direction:' + (en ? 'ltr' : 'rtl') + ';text-align:' + (en ? 'left' : 'right') + '">' +
               '<span class="lp-grow-emoji" style="font-size:20px;line-height:1;width:34px;height:34px;min-width:34px;border-radius:9px;display:grid;place-items:center;background:rgba(79,169,250,0.12);border:1px solid rgba(79,169,250,0.25)">' + item.emoji + '</span>' +
               '<div style="display:flex;flex-direction:column;gap:2px;min-width:0;flex:1 1 auto">' +
-              '<span style="font-size:13px;font-weight:800;color:#f2efe9;line-height:1.2">' + item.title + '</span>' +
-              '<span style="font-size:11px;font-weight:500;color:#808a97;line-height:1.3">' + item.desc + '</span>' +
+              '<span style="font-size:13px;font-weight:800;color:#f2efe9;line-height:1.2">' + title + '</span>' +
+              '<span style="font-size:11px;font-weight:500;color:#808a97;line-height:1.3">' + desc + '</span>' +
               '</div>' +
               '</div>';
     }
@@ -776,8 +774,9 @@ function __lpRaf(fn, ms){
   function __LP_SUMROW_ALL(id, label, val){
     var e = document.getElementById(id);
     if(!e) return;
+    var en = isEn();
     e.classList.remove('lat');
-    e.setAttribute('dir', 'rtl');
+    e.setAttribute('dir', en ? 'ltr' : 'rtl');
     e.innerHTML = val;
     var row = rowById(id);
     if(row){
@@ -832,7 +831,7 @@ function __lpRaf(fn, ms){
     paintGrowth();
     paintSummary();
     var amtEl = getAmtEl();
-    if(amtEl) amtEl.textContent = Number(calc()).toLocaleString('fa-IR');
+    if(amtEl) amtEl.textContent = isEn() ? Number(calc()).toLocaleString('en-US') : Number(calc()).toLocaleString('fa-IR');
     csUI();
   }
   function isEn(){ return document.documentElement.getAttribute('lang') === 'en'; }
@@ -900,7 +899,7 @@ function __lpRaf(fn, ms){
   new MutationObserver(function(){ build(); }).observe(
     document.documentElement, {attributes:true, attributeFilter:['lang']});
 
-  /* ===== CFX-CS: custom account size (type / wheel / drag / +-) — price = linear interpolation between tiers, same as server ===== */
+  /* ===== CUSTOM PLAN SIZE: custom volume size (type / wheel / drag / +-) — price = linear interpolation between tiers ===== */
   var CS_MIN = 25, CS_MAX = 150, CS_STEP = 5;
   function csTiers(){
     return PLANS.filter(function(p){ return (p.type === mode || p.type === 'both') && (mode === 'two' ? p.two : p.real) > 0; })
@@ -963,9 +962,10 @@ function __lpRaf(fn, ms){
     if(csW){
       var basePr = curBase();
       var thousands = Math.round(basePr / 5000) * 5;
-      csW.innerHTML = '<div class="pk-cs-pr-wrap" dir="rtl">' +
-        '<span class="pk-cs-pr-num lat">' + Number(thousands).toLocaleString('fa-IR') + '</span> ' +
-        '<span class="pk-cs-pr-unit">هزار تومن</span>' +
+      var en = isEn();
+      csW.innerHTML = '<div class="pk-cs-pr-wrap" dir="' + (en ? 'ltr' : 'rtl') + '">' +
+        '<span class="pk-cs-pr-num lat">' + (en ? Number(thousands).toLocaleString('en-US') : Number(thousands).toLocaleString('fa-IR')) + '</span> ' +
+        '<span class="pk-cs-pr-unit">' + (en ? 'K Tomans' : 'هزار تومن') + '</span>' +
         '</div>';
     }
     var fill = document.getElementById('pk-cs-fill');
@@ -1013,7 +1013,7 @@ function __lpRaf(fn, ms){
       b.addEventListener('contextmenu', function(e){ e.preventDefault(); });
     });
   }
-  /* ===== CFX-CS END ===== */
+  /* ===== CUSTOM PLAN SIZE END ===== */
 
   build(); paint();
   setInterval(function(){
@@ -1287,7 +1287,7 @@ function __lpRaf(fn, ms){
 })();
 /* === END PLAN-FOLD-DESKTOP === */
 
-/* ===== CFX-LPV: landing plan picker — plan title bar, prices on size cards, perks inside the summary (v2) ===== */
+/* ===== LPV: landing plan picker — plan title bar, prices on size cards, perks inside the summary (v2) ===== */
 (function(){
   var amt = document.getElementById('pk-amt');
   if(!amt) return;
@@ -1318,16 +1318,17 @@ function __lpRaf(fn, ms){
   var CHK = '<i><svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></i>';
   var last = '';
   function decorate(m){
+    var e = en();
     Array.prototype.forEach.call(sizes.querySelectorAll('.pk-size'), function(b){
       var p = PL[b.getAttribute('data-id')]; if(!p) return;
       var pr = m === 'two' ? (p.basePrice && p.basePrice.two) : (p.basePrice && p.basePrice.real);
       var thousands = Math.round(pr / 1000);
-      var t = thousands ? (Number(thousands).toLocaleString('fa-IR') + ' هزار تومن') : '';
+      var t = thousands ? (e ? (Number(thousands).toLocaleString('en-US') + 'K Tomans') : (Number(thousands).toLocaleString('fa-IR') + ' هزار تومن')) : '';
       var sp = b.querySelector('.pk-sp');
       if(!sp){
         sp = document.createElement('span');
         sp.className = 'pk-sp';
-        sp.setAttribute('dir', 'rtl');
+        sp.setAttribute('dir', e ? 'ltr' : 'rtl');
         b.appendChild(sp);
       }
       if(sp.textContent !== t) sp.textContent = t;
@@ -1338,10 +1339,10 @@ function __lpRaf(fn, ms){
     if(!s) s = (m === 'two' ? 75 : 50);
     decorate(m);
     var key = [m, s, e].join('|'); if(key === last) return; last = key;
-    var sFa = Number(s).toLocaleString('fa-IR');
+    var sFormatted = e ? Number(s).toLocaleString('en-US') : Number(s).toLocaleString('fa-IR');
     head.innerHTML = m === 'two'
-      ? (e ? 'Monthly Plan ' + s + ' GB' : 'اشتراک ماهانه ' + sFa + ' گیگابایت')
-      : (e ? 'Credit Top-up ' + s + ' GB — No Expiry' : 'بسته اعتباری ' + sFa + ' گیگابایت — بدون انقضا');
+      ? (e ? 'Monthly Plan ' + sFormatted + ' GB' : 'اشتراک ماهانه ' + sFormatted + ' گیگابایت')
+      : (e ? 'Credit Top-up ' + sFormatted + ' GB — No Expiry' : 'بسته اعتباری ' + sFormatted + ' گیگابایت — بدون انقضا');
     var L = m === 'two'
       ? (e ? ['Unlimited connected devices without speed drop', 'VLESS & Reality anti-filter protocols', 'Dedicated Iran tunnel to UK & Netherlands', 'Full guarantee + instant bot delivery']
            : ['بدون محدودیت در تعداد کاربر و دستگاه متصل', 'پروتکل‌های نسل جدید ضد فیلتر (Reality و VLESS)', 'تانل اختصاصی ایران به سرورهای انگلیس و هلند', 'ضمانت بازگشت وجه کامل + تحویل آنی در ربات'])
@@ -1361,4 +1362,4 @@ function __lpRaf(fn, ms){
     render();
   }, 300);
 })();
-/* ===== CFX-LPV END ===== */
+/* ===== LPV END ===== */
