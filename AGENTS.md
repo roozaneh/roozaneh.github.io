@@ -38,7 +38,7 @@ Roozaneh Network provides high-speed, anti-censorship, stable tunneling services
 ---
 
 ## 3. Contact & Official Governance
-- Official Bot: [@RoozanehNetBot](https://t.me/RoozanehNetBot)
+- Official Bot: [@RoozanehNetBot](https://t.me/RoozanehNetBot?start=site_home)
 - 24/7 Human Customer Support: [@RoozanehHelp](https://t.me/RoozanehHelp)
 - Official Channel: [@RoozanehNet](https://t.me/RoozanehNet)
 - Official X / Twitter: [@RoozanehNet](https://x.com/RoozanehNet)
