@@ -44,4 +44,4 @@ Allow: /
 User-agent: Amazonbot
 Allow: /
 
-Sitemap: https://roozaneh.github.io/sitemap.xml
+Sitemap: https://roozaneh.github.io/sitemap_index.xml

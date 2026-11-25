@@ -2,6 +2,22 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://roozaneh.github.io/sitemap.xml</loc>
-    <lastmod>2026-11-22</lastmod>
+    <lastmod>2026-11-25</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://roozaneh.github.io/kharid-vpn-filter-shekan/sitemap.xml</loc>
+    <lastmod>2026-11-25</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://roozaneh.github.io/v2ray-configs-iran/sitemap.xml</loc>
+    <lastmod>2026-11-25</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://roozaneh.github.io/iran-tunnel-v2ray-netmeli/sitemap.xml</loc>
+    <lastmod>2026-11-25</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://roozaneh.github.io/v2ray-clients-download/sitemap.xml</loc>
+    <lastmod>2026-11-25</lastmod>
   </sitemap>
 </sitemapindex>
