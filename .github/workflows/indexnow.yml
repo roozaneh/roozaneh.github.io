@@ -1,0 +1,48 @@
+name: Ping IndexNow Search Engines
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'sitemap*.xml'
+      - 'llms*.txt'
+  workflow_dispatch:
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for GitHub Pages propagation
+        run: sleep 30
+
+      - name: Notify IndexNow (Bing, Yandex, Seznam, Naver)
+        run: |
+          status=$(curl -s -o /tmp/indexnow_resp.txt -w "%{http_code}" -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{
+              "host": "roozaneh.github.io",
+              "key": "113949291c66a76e696870c210f8eee4",
+              "keyLocation": "https://roozaneh.github.io/113949291c66a76e696870c210f8eee4.txt",
+              "urlList": [
+                "https://roozaneh.github.io/",
+                "https://roozaneh.github.io/kharid-vpn-filter-shekan/",
+                "https://roozaneh.github.io/v2ray-configs-iran/",
+                "https://roozaneh.github.io/iran-tunnel-v2ray-netmeli/",
+                "https://roozaneh.github.io/v2ray-clients-download/",
+                "https://roozaneh.github.io/v2ray-clients-download/apps/v2rayng.html",
+                "https://roozaneh.github.io/v2ray-clients-download/apps/v2rayn.html",
+                "https://roozaneh.github.io/v2ray-clients-download/apps/streisand.html",
+                "https://roozaneh.github.io/v2ray-clients-download/apps/v2box.html",
+                "https://roozaneh.github.io/v2ray-clients-download/apps/happ.html",
+                "https://roozaneh.github.io/v2ray-clients-download/apps/hiddify.html",
+                "https://roozaneh.github.io/v2ray-clients-download/apps/nekoray.html",
+                "https://roozaneh.github.io/v2ray-clients-download/apps/nekobox.html",
+                "https://roozaneh.github.io/v2ray-clients-download/apps/singbox.html",
+                "https://roozaneh.github.io/v2ray-clients-download/privacy.html",
+                "https://roozaneh.github.io/v2ray-clients-download/terms.html"
+              ]
+            }')
+          echo "IndexNow HTTP Status: $status"
+          cat /tmp/indexnow_resp.txt
+          test "$status" = "200" -o "$status" = "202"
